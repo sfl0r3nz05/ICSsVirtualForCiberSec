@@ -11,8 +11,8 @@
     - Update the system: `sudo apt-get update`
     - Install neccesary libraries: e.g.: `sudo apt-get install -y gcc g++ gfortran`
     - Install Matlab Simulink:
-      <img src="https://github.com/sfl0r3nz05/ICSVirtual/images/simulink1.png">
-      <img src="https://github.com/sfl0r3nz05/ICSVirtual/images/simulink2.png">
+      <img src="https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink1.png">
+      <img src="https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink2.png">
   
 
 ## How to test connection
