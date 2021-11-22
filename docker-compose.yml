@@ -1,6 +1,11 @@
 version: '3'
 
+networks:
+  ics:
+    driver: bridge
+
 services:
+
   database:
     container_name: mysql
     image: mysql/mysql-server:5.7
@@ -14,6 +19,8 @@ services:
     expose: [ "3306" ]
     volumes:
       - ./databases:/var/lib/mysql
+    networks:
+      - ics
 
   scadalts:
     image: scadalts/scadalts:latest
@@ -24,6 +31,8 @@ services:
     expose: [ "8080", "8000" ]
     links:
       - database:database
+    networks:
+      - ics
 
   openplc:
     image: sflorenz05/openplc:v3
@@ -32,3 +41,17 @@ services:
     ports:
       - "502:502"
       - "8081:8080"
+    networks:
+      - ics
+  #####
+
+  # docker run -it --rm --network=scada-lts_ics -e PASSWORD=ILoveMATLAB -p 5901:5901 -p 6080:6080 --shm-size=512M mathworks/matlab:r2021b -vnc
+  # matlab:
+  #   image: mathworks/matlab:r2021b
+  #   shm_size: 512M
+  #   ports:
+  #     - "5901:5901"
+  #     - "6080:6080"
+  #   environment:
+  #     NOVNC: "true"
+  #     PASSWORD: "ILoveMATLAB"
