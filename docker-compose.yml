@@ -46,12 +46,14 @@ services:
   #####
 
   # docker run -itd --rm --network=scada-lts_ics -v remedy:/home/matlab/Documents/MATLAB/remedy -e PASSWORD=ILoveMATLAB -p 5901:5901 -p 6080:6080 --shm-size=512M mathworks/matlab:r2021b -vnc
-  # matlab:
-  #   image: mathworks/matlab:r2021b
-  #   shm_size: 512M
-  #   ports:
-  #     - "5901:5901"
-  #     - "6080:6080"
-  #   environment:
-  #     NOVNC: "true"
-  #     PASSWORD: "ILoveMATLAB"
+  matlab:
+    image: mathworks/matlab:r2021b
+    shm_size: 512M
+    ports:
+      - "5901:5901"
+      - "6080:6080"
+    environment:
+      PASSWORD: "ILoveMATLAB"
+    command: -vnc
+    volumes:
+      - ./remedy:/home/matlab/Documents/MATLAB/remedy
