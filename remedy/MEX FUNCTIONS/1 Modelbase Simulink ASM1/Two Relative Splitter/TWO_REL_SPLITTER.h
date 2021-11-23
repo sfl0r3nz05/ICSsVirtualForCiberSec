@@ -1,7 +1,7 @@
 
 
-// Parametros del modelo nº 1
-#include "..\ModN1.h"
+// Parametros del modelo nï¿½ 1
+#include "../ModN1.h"
 
 // CARACTERISTICAS DEL BLOQUE
 // _____________________________________________________________________
@@ -28,7 +28,7 @@
 #define NUMPWORKS			1
 #define PARAM_SPLT			((real_T *)PWork[0])
 
-// Parámetros
+// Parï¿½metros
 #define FQ_O1				PARAM_SPLT[0]  
 
 

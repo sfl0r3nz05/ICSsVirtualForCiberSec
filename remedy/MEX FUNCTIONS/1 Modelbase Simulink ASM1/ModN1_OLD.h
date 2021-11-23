@@ -9,14 +9,14 @@
 #define NUMCOEFCINETICOS		15
 
 // ESTEQUIOMETRICOS
-#define yH				((real_T*)PWork[0])[0]
-#define yA				((real_T*)PWork[0])[1]
-#define fP				((real_T*)PWork[0])[2]
-#define iXB				((real_T*)PWork[0])[3]
-#define iXP				((real_T*)PWork[0])[4]
-#define iVSS_XB			((real_T*)PWork[0])[5]
-#define iVSS_XI			((real_T*)PWork[0])[6]
-#define iVSS_XS			((real_T*)PWork[0])[7]
+#define yH				PARAM_ESTEQUIOM[0]
+#define yA				PARAM_ESTEQUIOM[1]
+#define fP				PARAM_ESTEQUIOM[2]
+#define iXB				PARAM_ESTEQUIOM[3]
+#define iXP				PARAM_ESTEQUIOM[4]
+#define iVSS_XB			PARAM_ESTEQUIOM[5]
+#define iVSS_XI			PARAM_ESTEQUIOM[6]
+#define iVSS_XS			PARAM_ESTEQUIOM[7]
 
 // CINETICOS
 #define muH				CINETICOS_T[0]

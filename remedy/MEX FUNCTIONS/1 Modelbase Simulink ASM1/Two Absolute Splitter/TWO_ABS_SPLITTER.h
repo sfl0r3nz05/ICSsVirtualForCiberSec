@@ -1,7 +1,7 @@
 
 
-// Parametros del modelo nº 1
-#include "..\ModN1.h"
+// Parametros del modelo nï¿½ 1
+#include "../ModN1.h"
 
 // CARACTERISTICAS DEL BLOQUE
 // _____________________________________________________________________

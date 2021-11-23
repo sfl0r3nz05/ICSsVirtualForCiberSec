@@ -51,14 +51,14 @@
 ////////////////////////////////////////////////////////////////////////
 // Vectores de TRABAJO
 #define NUMPWORKS			4
-#define PARAM_ESTEQUIOM		PWork[0]
-#define PARAM_SETTL			PWork[1]
+#define PARAM_ESTEQUIOM		((real_T *)PWork[0])
+#define PARAM_SETTL			((real_T *)PWork[1])
 #define ESTADOSADIC			PWork[2]			//
 #define	LOGFILE				PWork[3]		// Archivo para depuraci�n
 
 
 // Par�metros
-#define F_NS				PARAM_SETTL[0]      
+#define F_NS				((real_T*)PWork[1])[0]   
 
 // ESTADOS ADICIONALES DEl SISTEMA (estados adicionales a los del modelo) 
 // TODAV�A SIN DEFINIR
@@ -70,10 +70,10 @@
 #define NUM_EA_NOTUSED			8
 
 // Elementos del vector SENSORES
-#define SST_EFF					(PWork[2][0][0])
-#define NH4_EFF					(PWork[2][0][1])
-#define NO3_EFF					(PWork[2][0][2])
-#define MLSS_RECF				(PWork[2][0][3])
+#define SST_EFF					Sensores[0]
+#define NH4_EFF					Sensores[1]
+#define NO3_EFF					Sensores[2]
+#define MLSS_RECF				Sensores[3]
 
 // _____________________________________________________________________
 
