@@ -8,10 +8,12 @@
     - Enable permissions to Matlab folder `sudo chmod 777 -R /opt/matlab/R2021b`
     - Update the system: `sudo apt-get update`
     - Install neccesary libraries: e.g.: `sudo apt-get install -y gcc g++ gfortran`
-    - asdas
+  
+    - Import the files into the PATH:
       <img src="https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink3.png">
       <img src="https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink4.png">
       <img src="https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink5.png">
+
     - Install Matlab Simulink:
       <img src="https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink1.png">
       <img src="https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink2.png">
