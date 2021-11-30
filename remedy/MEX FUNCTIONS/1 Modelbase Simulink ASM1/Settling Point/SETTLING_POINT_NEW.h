@@ -27,7 +27,7 @@
 #define OP_OUTFLUX_EFF				1
 #define OP_OUTFLUX_REC				2
 
-#define ANCHURAPUERTO1SALIDA		NUM_EASENSORES				// Sensores            
+#define ANCHURAPUERTO1SALIDA		NUM_SENSORES				// Sensores            
 #define ANCHURAPUERTO2SALIDA		(1+NUMESTADOSMODASM1)								
 #define ANCHURAPUERTO3SALIDA		(1+NUMESTADOSMODASM1)
 
@@ -50,30 +50,22 @@
 // ASIGNACION DE VECTORES DE TRABAJO
 ////////////////////////////////////////////////////////////////////////
 // Vectores de TRABAJO
-#define NUMPWORKS			4
+#define NUMPWORKS			3
 #define PARAM_ESTEQUIOM		((real_T *)PWork[0])
 #define PARAM_SETTL			((real_T *)PWork[1])
-#define ESTADOSADIC			((real_T **)PWork[2])	//
-#define	LOGFILE				((FILE *)PWork[3])		// Archivo para depuraci�n
+#define SENSORES			((real_T *)PWork[2])
 
 
 // Par�metros
-#define F_NS				PARAM_SETTL[0]      
+#define F_NS				((real_T*)PWork[1])[0]   
 
-// ESTADOS ADICIONALES DEl SISTEMA (estados adicionales a los del modelo) 
-// TODAV�A SIN DEFINIR
-#define NUM_ESTADOSADIC			2
-#define EA_SENSORES				ESTADOSADIC[0]
-#define EA_NOT_USED				ESTADOSADIC[1]
-
-#define NUM_EASENSORES			4
-#define NUM_EA_NOTUSED			8
+#define NUM_SENSORES			4
 
 // Elementos del vector SENSORES
-#define SST_EFF					(EA_SENSORES[0])
-#define NH4_EFF					(EA_SENSORES[1])
-#define NO3_EFF					(EA_SENSORES[2])
-#define MLSS_RECF				(EA_SENSORES[3])
+#define SST_EFF					Sensores[0]
+#define NH4_EFF					Sensores[1]
+#define NO3_EFF					Sensores[2]
+#define MLSS_RECF				Sensores[3]
 
 // _____________________________________________________________________
 
