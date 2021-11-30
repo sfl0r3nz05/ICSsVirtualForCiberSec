@@ -32,3 +32,13 @@
     - ping: `e.g.: ping 192.168.144.3`
 
 ## Running Scada-LTS
+- Login with admin/admin
+- Create empty script in "Scripting"
+- Next go to the "SQL" tab
+- Paste content scripts-one-insert.txt file into the text field "SQL"
+- Click "Submit update"
+- If the operation is successful, the information about adding 12 records will be displayed
+- Then import the project (.json file) 
+- Add a data source running on port 502 with host:openplc
+- Make the connection with OpenPLC
+- Add the background image at "Graphical views"
