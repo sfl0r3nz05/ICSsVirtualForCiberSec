@@ -1,0 +1,13 @@
+INSERT INTO scripts (userId, xid, name, script, data) VALUES 
+((SELECT id FROM users WHERE username='admin'), 'SC_290169', '', '', (SELECT sc.data FROM scripts sc LIMIT 1)),
+((SELECT id FROM users WHERE username='admin'), 'SC_256909', '', '', (SELECT sc.data FROM scripts sc LIMIT 1)),
+((SELECT id FROM users WHERE username='admin'), 'SC_831503', '', '', (SELECT sc.data FROM scripts sc LIMIT 1)),
+((SELECT id FROM users WHERE username='admin'), 'SC_586810', '', '', (SELECT sc.data FROM scripts sc LIMIT 1)),
+((SELECT id FROM users WHERE username='admin'), 'SC_290170', '', '', (SELECT sc.data FROM scripts sc LIMIT 1)),
+((SELECT id FROM users WHERE username='admin'), 'SC_256910', '', '', (SELECT sc.data FROM scripts sc LIMIT 1)),
+((SELECT id FROM users WHERE username='admin'), 'SC_831504', '', '', (SELECT sc.data FROM scripts sc LIMIT 1)),
+((SELECT id FROM users WHERE username='admin'), 'SC_586811', '', '', (SELECT sc.data FROM scripts sc LIMIT 1)),
+((SELECT id FROM users WHERE username='admin'), 'SC_290171', '', '', (SELECT sc.data FROM scripts sc LIMIT 1)),
+((SELECT id FROM users WHERE username='admin'), 'SC_256911', '', '', (SELECT sc.data FROM scripts sc LIMIT 1)),
+((SELECT id FROM users WHERE username='admin'), 'SC_831505', '', '', (SELECT sc.data FROM scripts sc LIMIT 1)),
+((SELECT id FROM users WHERE username='admin'), 'SC_586812', '', '', (SELECT sc.data FROM scripts sc LIMIT 1));
