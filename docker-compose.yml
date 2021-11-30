@@ -54,5 +54,5 @@ services:
     environment:
       PASSWORD: "ILoveMATLAB"
       command: -vnc
-  volumes:
+      volumes:
       - ./remedy:/home/matlab/Documents/MATLAB/remedy
