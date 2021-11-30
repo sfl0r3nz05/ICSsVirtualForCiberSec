@@ -30,3 +30,5 @@
     - `sudo apt-get update`
     - `sudo apt-get install iputils-ping`
     - ping: `e.g.: ping 192.168.144.3`
+
+## Running Scada-LTS
