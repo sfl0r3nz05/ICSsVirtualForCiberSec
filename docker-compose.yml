@@ -53,6 +53,6 @@ services:
       - "6080:6080"
     environment:
       PASSWORD: "ILoveMATLAB"
-    command: -vnc
+      command: -vnc
   volumes:
       - ./remedy:/home/matlab/Documents/MATLAB/remedy
