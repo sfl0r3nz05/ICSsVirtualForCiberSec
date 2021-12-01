@@ -18,7 +18,7 @@ services:
       - MYSQL_DATABASE=scadalts
     expose: [ "3306" ]
     volumes:
-      - ./databases:/var/lib/mysql
+      - ../mysql/databases:/var/lib/mysql
     networks:
       - ics
 
@@ -35,7 +35,7 @@ services:
       - ics
 
   openplc:
-    image: sflorenz05/openplc:v3
+    image: sflorenz05/OpenPLC
     depends_on:
       - scadalts
     ports:
@@ -55,4 +55,4 @@ services:
       PASSWORD: "ILoveMATLAB"
       command: -vnc
       volumes:
-      - ./remedy:/home/matlab/Documents/MATLAB/remedy
+      - ../matlab/simulink:/home/matlab/Documents/MATLAB/simulink
