@@ -14,7 +14,6 @@
       * `docker build -t open-plc .`
   
   ### Getting Started Matlab
-
   - Run the MATLAB container using this command:
       `docker run -it -p 5901:5901 -p 6080:6080 --shm-size=512M mathworks/matlab:r20XYz -vnc`
       
@@ -44,6 +43,20 @@
         - `docker commit <containerID> <repository>:<tag>`
           - E.g.: `docker commit 3d555451f07a mymatlab:r2020a`
 
+  ### Getting started Scada-LTS
+  - Once Scada-LTS container is running:
+    - Login with admin/admin
+    - Create empty script in "Scripting"
+    - Next go to the "SQL" tab
+    - Paste content scripts-one-insert.txt file into the text field "SQL"
+      - File `scripts-one-insert.txt` is placed into `~/ICSVirtual/scada-lts/scripts`
+    - Click "Submit update"
+    - If the operation is successful, the information about adding 12 records will be displayed
+    - Then import the project (.json file) 
+    - Add a data source running on port 502 with host:openplc
+    - Make the connection with OpenPLC
+    - Add the background image at "Graphical views"
+
 ## How to use
 - `cd ~/ICSVirtual/network`
 - `docker-compose up -d`
@@ -57,16 +70,3 @@
     - `sudo apt-get update`
     - `sudo apt-get install iputils-ping`
     - ping: `e.g.: ping 192.168.144.3`
-
-## Running Scada-LTS
-- Login with admin/admin
-- Create empty script in "Scripting"
-- Next go to the "SQL" tab
-- Paste content scripts-one-insert.txt file into the text field "SQL"
-  - File `scripts-one-insert.txt` is placed into `~/ICSVirtual/scada-lts/scripts`
-- Click "Submit update"
-- If the operation is successful, the information about adding 12 records will be displayed
-- Then import the project (.json file) 
-- Add a data source running on port 502 with host:openplc
-- Make the connection with OpenPLC
-- Add the background image at "Graphical views"
