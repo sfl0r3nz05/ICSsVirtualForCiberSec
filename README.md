@@ -15,8 +15,15 @@
   
   ### Getting Started Matlab
 
-  - Open a bash for the Matlab container: e.g.: `docker exec -it <containerID> bash`
+  - Run the MATLAB container using this command:
+      `docker run -it -p 5901:5901 -p 6080:6080 --shm-size=512M mathworks/matlab:r20XYz -vnc`
+      
+      * :r20XYz chooses the release version of the MATLAB container.
   
+    - Open a bash for the Matlab container: e.g.: `docker exec -it <containerID> bash`
+  
+    - Enable permissions to Matlab folder `sudo matlab`
+
     - Enable permissions to Matlab folder `sudo chmod +x /opt/matlab/R2021b`
   
     - Update the system: `sudo apt-get update`
