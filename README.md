@@ -6,8 +6,8 @@
 3. Install [docker-compose for ubuntu](https://docs.docker.com/compose/install/)
 4. Install make `sudo apt install make`
 5. Build openplc image: 
-  * cd `~/ICSVirtual/openplc`
-  * `docker build -t open-plc .`
+    * cd `~/ICSVirtual/openplc`
+    * `docker build -t open-plc .`
 
 ## How to use
 - `docker-compose up -d`
