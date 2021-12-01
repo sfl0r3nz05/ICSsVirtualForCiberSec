@@ -14,9 +14,10 @@
       * `docker build -t open-plc .`
   
   ### Getting Started Matlab
-  - Open a bash for the Matlab container: e.g.: `docker exec -it <containerID> bash`
   
-  - Enable permissions to Matlab folder `sudo chmod +x /opt/matlab/R2021b`
+    - Open a bash for the Matlab container: e.g.: `docker exec -it <containerID> bash`
+  
+    - Enable permissions to Matlab folder `sudo chmod +x /opt/matlab/R2021b`
   
     - Update the system: `sudo apt-get update`
   
