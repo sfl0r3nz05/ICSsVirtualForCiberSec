@@ -45,6 +45,7 @@
           - E.g.: `docker commit 3d555451f07a mymatlab:r2020a`
 
 ## How to use
+- `cd ~/ICSVirtual/network`
 - `docker-compose up -d`
 - `docker-compose down`
 
