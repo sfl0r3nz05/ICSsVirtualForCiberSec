@@ -13,10 +13,11 @@
       * cd `~/ICSVirtual/openplc`
       * `docker build -t open-plc .`
   2. Once OpenPLC container is running:
-    * Disable DNP3/EtherNET/IP to use only Modbus protocol:
+    - Disable DNP3/EtherNET/IP to use only Modbus protocol:
     <img src="https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/openplc1.png">
-    * Load the `*.st` file of the project.
-    * Start PLC.
+    
+    - Load the `*.st` file of the project.
+    - Start PLC.
   
   ### Getting Started Matlab
   - Run the MATLAB container using this command:
