@@ -17,7 +17,7 @@
       
       <img src="https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/openplc1.png">
     
-    - Load the `*.st` file and start PLC:
+    - Load the *.st file and start PLC:
       
       <img src="https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/openplc2.png">
   
