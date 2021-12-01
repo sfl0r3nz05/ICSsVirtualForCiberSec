@@ -63,6 +63,7 @@
 - Create empty script in "Scripting"
 - Next go to the "SQL" tab
 - Paste content scripts-one-insert.txt file into the text field "SQL"
+  - File `scripts-one-insert.txt` is placed into `~/ICSVirtual/scada-lts/scripts`
 - Click "Submit update"
 - If the operation is successful, the information about adding 12 records will be displayed
 - Then import the project (.json file) 
