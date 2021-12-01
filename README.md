@@ -33,11 +33,9 @@
       <img src="https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink2.png">
 
     - [Save changes in container](https://www.mathworks.com/help/cloudcenter/ug/save-changes-in-containers.html)
-        - docker ps
-        - docker commit <containerID> <repository>:<tag>
-        - E.g.:
-              <img src="https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/snapshot1.png">
-              <img src="https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/snapshot2.png">
+        - `docker ps`
+        - `docker commit <containerID> <repository>:<tag>`
+          - E.g.: `docker commit 3d555451f07a mymatlab:r2020a`
 
 ## How to use
 - `docker-compose up -d`
