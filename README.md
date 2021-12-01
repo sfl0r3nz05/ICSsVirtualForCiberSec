@@ -34,9 +34,6 @@
     - [Save changes in container](https://www.mathworks.com/help/cloudcenter/ug/save-changes-in-containers.html)
         - docker ps
         - docker commit <containerID> <repository>:<tag>
-        - E.g.:
-              <img src="https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/snapshot1.png">
-              <img src="https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/snapshot2.png">
 
 ## How to use
 - `docker-compose up -d`
