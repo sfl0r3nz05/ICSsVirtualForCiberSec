@@ -18,6 +18,7 @@
     
   - Load the `*.st` file of the project.
   - Start PLC.
+    <img src="https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/openplc1.png">
   
   ### Getting Started Matlab
   - Run the MATLAB container using this command:
