@@ -35,7 +35,7 @@ services:
       - ics
 
   openplc:
-    image: open-plc
+    image: sflorenz05/open-plc:v0.1
     depends_on:
       - scadalts
     ports:
@@ -43,19 +43,19 @@ services:
       - "8081:8080"
     volumes:
       - ../openplc:/home/openplc/scripts
+    command: -privileged
     networks:
       - ics
-
-  matlab:
-    image: mathworks/matlab:r2021b
-    shm_size: 512M
-    ports:
-      - "5901:5901"
-      - "6080:6080"
-    environment:
-      PASSWORD: "ILoveMATLAB"
-      command: -vnc
-      volumes:
-        - ../matlab/simulink:/home/matlab/Documents/MATLAB/simulink
-    networks:
-      - ics
+  # matlab:
+  #   image: mathworks/matlab:r2021b
+  #   shm_size: 512M
+  #   ports:
+  #     - "5901:5901"
+  #     - "6080:6080"
+  #   environment:
+  #     PASSWORD: "ILoveMATLAB"
+  #     command: -vnc
+  #     volumes:
+  #       - ../matlab/simulink:/home/matlab/Documents/MATLAB/simulink
+  #   networks:
+  #     - ics

@@ -12,6 +12,12 @@
   1. Build openplc image: 
       * cd `~/ICSVirtual/openplc`
       * `docker build -t open-plc .`
+  2. Once OpenPLC container is running:
+    - Disable DNP3/EtherNET/IP:
+      <img src="https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/openplc1.png">
+    
+    - Load the `*.st` file and start PLC:
+      <img src="https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/openplc2.png">
   
   ### Getting Started Matlab
   - Run the MATLAB container using this command:
