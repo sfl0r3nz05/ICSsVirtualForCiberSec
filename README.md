@@ -14,6 +14,7 @@
       * `docker build -t open-plc .`
   
   ### Getting Started Matlab
+
   - Open a bash for the Matlab container: e.g.: `docker exec -it <containerID> bash`
   
     - Enable permissions to Matlab folder `sudo chmod +x /opt/matlab/R2021b`
@@ -34,6 +35,9 @@
     - [Save changes in container](https://www.mathworks.com/help/cloudcenter/ug/save-changes-in-containers.html)
         - docker ps
         - docker commit <containerID> <repository>:<tag>
+        - E.g.:
+              <img src="https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/snapshot1.png">
+              <img src="https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/snapshot2.png">
 
 ## How to use
 - `docker-compose up -d`
