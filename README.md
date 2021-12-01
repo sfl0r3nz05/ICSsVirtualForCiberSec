@@ -5,18 +5,18 @@
 2. [Manage Docker as non-root user](https://docs.docker.com/engine/install/linux-postinstall/)
 3. Install [docker-compose for ubuntu](https://docs.docker.com/compose/install/)
 4. Install make `sudo apt install make`
-5. Build openplc image: 
-    * cd `~/ICSVirtual/openplc`
-    * `docker build -t open-plc .`
 
-## How to use
-- `docker-compose up -d`
-- `docker-compose down`
+## Getting Started
+
+  ### Getting Started OpenPLC
+  1. Build openplc image: 
+      * cd `~/ICSVirtual/openplc`
+      * `docker build -t open-plc .`
   
   ### Getting Started Matlab
     - Open a bash for the Matlab container: e.g.: `docker exec -it <containerID> bash`
   
-    - Enable permissions to Matlab folder `sudo chmod 777 -R /opt/matlab/R2021b`
+    - Enable permissions to Matlab folder `sudo chmod +x /opt/matlab/R2021b`
   
     - Update the system: `sudo apt-get update`
   
@@ -30,7 +30,18 @@
     - Install Matlab Simulink:
       <img src="https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink1.png">
       <img src="https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink2.png">
-  
+
+    - [Save changes in container](https://www.mathworks.com/help/cloudcenter/ug/save-changes-in-containers.html)
+        - docker ps
+        - docker commit <containerID> <repository>:<tag>
+        - E.g.:
+              <img src="https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/snapshot1.png">
+              <img src="https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/snapshot2.png">
+
+## How to use
+- `docker-compose up -d`
+- `docker-compose down`
+
 ## How to test connection
 - `docker inspect <containerid>`
 - `docker exec -it <containerid> bash`
