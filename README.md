@@ -11,9 +11,9 @@
     - [Getting Started Matlab](#getting-started-matlab)
       - [Create your own Matlab Simulink image](#create-your-own-matlab-simulink-image)
       - [Use the matlab simulink image create for the project](#use-the-matlab-simulink-image-create-for-the-project)
-      - [Troubleshootings](#troubleshootings)
+      - [Troubleshootings Matlab on Docker](#troubleshootings-matlab-on-docker)
     - [Getting started Scada-LTS](#getting-started-scada-lts)
-      - [Troubleshootings](#troubleshootings-1)
+      - [Troubleshootings Scada-LTS](#troubleshootings-scada-lts)
   - [How to use](#how-to-use)
   - [How to test connection](#how-to-test-connection)
     - [Install/use ping network tool](#installuse-ping-network-tool)
@@ -49,12 +49,16 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 #### Follow this recommendation [Only for Modbus]
 
 - Once OpenPLC container is running:
+  
 - Disable DNP3/EtherNET/IP to use only Modbus protocol:
-    <img src="https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/openplc1.png">
+
+<img src="https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/openplc1.png">
 
 - Load the `*.st` file of the project.
+  
 - Start PLC.
-    <img src="https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/openplc2.png">  
+
+<img src="https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/openplc2.png">  
 
 ### Getting Started Matlab
 
@@ -70,7 +74,9 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
   - Run Matlab with `root` permissions: `sudo matlab`
 
   - Install Matlab Simulink as add-on:
+
       <img src="https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink1.png">
+
       <img src="https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink2.png">
 
   - [Save changes in container](https://www.mathworks.com/help/cloudcenter/ug/save-changes-in-containers.html)
@@ -83,7 +89,7 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 - Open docker-compose file `cd ~/ICSVirtual/network/`
 - Change the image of the `matlab` service by `sflorenz05/matlab_simulink:v0.1`
   
-#### Troubleshootings
+#### Troubleshootings Matlab on Docker
 
 - [Matlab from docker-compose #39](https://github.com/mathworks-ref-arch/matlab-dockerfile/issues/39)
 - [Installing Simulink as a Docker Matlab add-on #40](https://github.com/mathworks-ref-arch/matlab-dockerfile/issues/40)
@@ -103,7 +109,7 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
   - Make the connection with OpenPLC
   - Add the background image at "Graphical views"
 
-#### Troubleshootings
+#### Troubleshootings Scada-LTS
 
 - [Graphical views Scada-LTS #1961](https://github.com/SCADA-LTS/Scada-LTS/issues/1961)
 
