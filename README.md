@@ -21,6 +21,7 @@
     <img src="https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/openplc2.png">
   
   ### Getting Started Matlab
+  #### Create your own Matlab Simulink image  
   - Run the MATLAB container using this command:
       `docker run -it -p 5901:5901 -p 6080:6080 --shm-size=512M mathworks/matlab:r20XYz -vnc`
       
@@ -28,20 +29,9 @@
   
     - Open a bash for the Matlab container: e.g.: `docker exec -it <containerID> bash`
   
-    - Enable permissions to Matlab folder `sudo matlab`
+    - Run Matlab with `root` permissions: `sudo matlab`
 
-    - Enable permissions to Matlab folder `sudo chmod +x /opt/matlab/R2021b`
-  
-    - Update the system: `sudo apt-get update`
-  
-    - Install neccesary libraries: e.g.: `sudo apt-get install -y gcc g++ gfortran`
-  
-    - Import the files into the PATH:
-      <img src="https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink3.png">
-      <img src="https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink4.png">
-      <img src="https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink5.png">
-
-    - Install Matlab Simulink:
+    - Install Matlab Simulink as add-on:
       <img src="https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink1.png">
       <img src="https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink2.png">
 
@@ -49,6 +39,10 @@
         - `docker ps`
         - `docker commit <containerID> <repository>:<tag>`
           - E.g.: `docker commit 3d555451f07a mymatlab:r2020a`
+
+  #### Use the matlab simulink image create for the project
+    - Open docker-compose file `cd ~/ICSVirtual/network/`
+    - Change the image of the matlab service by `sflorenz05/matlab_simulink:v0.1`
 
   ### Getting started Scada-LTS
   - Once Scada-LTS container is running:
