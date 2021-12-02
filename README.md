@@ -54,6 +54,10 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
   #### Use the matlab simulink image create for the project
   - Open docker-compose file `cd ~/ICSVirtual/network/`
   - Change the image of the `matlab` service by `sflorenz05/matlab_simulink:v0.1`
+  
+  #### Troubleshootings
+  - [Matlab from docker-compose #39](https://github.com/mathworks-ref-arch/matlab-dockerfile/issues/39)
+  - [Installing Simulink as a Docker Matlab add-on #40](https://github.com/mathworks-ref-arch/matlab-dockerfile/issues/40)
 
   ### Getting started Scada-LTS
   - Once Scada-LTS container is running:
@@ -68,6 +72,9 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
     - Add a data source running on port 502 with host:openplc
     - Make the connection with OpenPLC
     - Add the background image at "Graphical views"
+
+    #### Troubleshootings
+    - [Graphical views Scada-LTS #1961](https://github.com/SCADA-LTS/Scada-LTS/issues/1961)
 
 ## How to use
 - `cd ~/ICSVirtual/network`
