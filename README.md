@@ -1,5 +1,10 @@
 # ICS Virtual
 
+## Description
+This project arises as @jmuguruza final degree project and aims to perform security tests on a water treatment plant. For this purpose, the project integrates 3 basic elements: [OpenPLC](https://github.com/thiagoralves/OpenPLC_v3), [Scada-LTS](https://github.com/SCADA-LTS/Scada-LTS) and [Matlab on Docker](https://github.com/mathworks-ref-arch/matlab-dockerfile).
+
+**Project Status:** `in progress`
+
 ## Requirements
 1. Install [docker for ubuntu](https://docs.docker.com/engine/install/ubuntu/)
 2. [Manage Docker as non-root user](https://docs.docker.com/engine/install/linux-postinstall/)
