@@ -20,6 +20,11 @@
   - Start PLC.
     <img src="https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/openplc2.png">
   
+  #### Use the matlab simulink image create for the project
+  - Open docker-compose file `cd ~/ICSVirtual/network/`
+  - Change the image of the matlab service by `sflorenz05/matlab_simulink:v0.1`
+  
+
   ### Getting Started Matlab
   #### Create your own Matlab Simulink image  
   - Run the MATLAB container using this command:
@@ -41,8 +46,8 @@
           - E.g.: `docker commit 3d555451f07a mymatlab:r2020a`
 
   #### Use the matlab simulink image create for the project
-    - Open docker-compose file `cd ~/ICSVirtual/network/`
-    - Change the image of the matlab service by `sflorenz05/matlab_simulink:v0.1`
+  - Open docker-compose file `cd ~/ICSVirtual/network/`
+  - Change the image of the matlab service by `sflorenz05/matlab_simulink:v0.1`
 
   ### Getting started Scada-LTS
   - Once Scada-LTS container is running:
