@@ -7,26 +7,27 @@
 4. Install make `sudo apt install make`
 
 ## Getting Started
-
   ### Getting Started OpenPLC
-  1. Build openplc image: 
+  #### Create your own OpenPLC image  
+  - Build openplc image: 
       * cd `~/ICSVirtual/openplc`
       * `docker build -t open-plc .`
-  2. Once OpenPLC container is running:
+  
+  #### Use the OpenPLC image create for the project
+  - Open docker-compose file `cd ~/ICSVirtual/network/`
+  - Change the image of the `openplc` service by `sflorenz05/open-plc:v0.1`
+
+  #### Follow this recommendation [Only for Modbus]
+  - Once OpenPLC container is running:
   - Disable DNP3/EtherNET/IP to use only Modbus protocol:
     <img src="https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/openplc1.png">
     
   - Load the `*.st` file of the project.
   - Start PLC.
-    <img src="https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/openplc2.png">
-  
-  #### Use the matlab simulink image create for the project
-  - Open docker-compose file `cd ~/ICSVirtual/network/`
-  - Change the image of the matlab service by `sflorenz05/matlab_simulink:v0.1`
-  
+    <img src="https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/openplc2.png">  
 
   ### Getting Started Matlab
-  #### Create your own Matlab Simulink image  
+  #### Create your own Matlab Simulink image
   - Run the MATLAB container using this command:
       `docker run -it -p 5901:5901 -p 6080:6080 --shm-size=512M mathworks/matlab:r20XYz -vnc`
       
@@ -47,7 +48,7 @@
 
   #### Use the matlab simulink image create for the project
   - Open docker-compose file `cd ~/ICSVirtual/network/`
-  - Change the image of the matlab service by `sflorenz05/matlab_simulink:v0.1`
+  - Change the image of the `matlab` service by `sflorenz05/matlab_simulink:v0.1`
 
   ### Getting started Scada-LTS
   - Once Scada-LTS container is running:
