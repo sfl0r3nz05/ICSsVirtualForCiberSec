@@ -1,0 +1,14 @@
+version: '3'
+
+networks:
+  ics:
+    driver: bridge
+
+services:
+  attacker:
+    image: frolvlad/alpine-gxx
+    volumes:
+      - ../../attacker:/home/attacker
+    command: sh "/home/attacker/injection_attack -h ${IP_PLC} -f ${FREQ}"
+    networks:
+      - ics

@@ -12,13 +12,13 @@ services:
     ports:
       - "3306:3306"
     environment:
-      - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_USER=root
-      - MYSQL_PASSWORD=root
-      - MYSQL_DATABASE=scadalts
+      - MYSQL_ROOT_PASSWORD="${MYSQL_ROOT_PASSWORD}"
+      - MYSQL_USER="${MYSQL_USER}"
+      - MYSQL_PASSWORD="${MYSQL_PASSWORD}"
+      - MYSQL_DATABASE="${MYSQL_DATABASE}"
     expose: [ "3306" ]
     volumes:
-      - ../mysql/databases:/var/lib/mysql
+      - ../../mysql/databases:/var/lib/mysql
     networks:
       - ics
 
@@ -42,7 +42,7 @@ services:
       - "502:502"
       - "8081:8080"
     volumes:
-      - ../openplc:/home/openplc/scripts
+      - ../../openplc:/home/openplc/scripts
     command: -privileged
     networks:
       - ics
@@ -57,6 +57,6 @@ services:
       PASSWORD: "ILoveMATLAB"
     command: -vnc
     volumes:
-      - ../matlab/simulink:/home/matlab/Documents/MATLAB/simulink
+      - ../../matlab/simulink:/home/matlab/Documents/MATLAB/simulink
     networks:
       - ics

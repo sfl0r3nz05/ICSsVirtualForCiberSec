@@ -14,7 +14,12 @@
       - [Troubleshootings Matlab on Docker](#troubleshootings-matlab-on-docker)
     - [Getting started Scada-LTS](#getting-started-scada-lts)
       - [Troubleshootings Scada-LTS](#troubleshootings-scada-lts)
-  - [How to use](#how-to-use)
+    - [Getting Started network](#getting-started-network)
+      - [ICSNetwork](#icsnetwork)
+      - [Attacker](#attacker)
+  - [How to use the project](#how-to-use-the-project)
+    - [Deploy ICSNetwork](#deploy-icsnetwork)
+    - [Deploy attacker](#deploy-attacker)
   - [How to test connection](#how-to-test-connection)
     - [Install/use ping network tool](#installuse-ping-network-tool)
 
@@ -30,6 +35,9 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 2. [Manage Docker as non-root user](https://docs.docker.com/engine/install/linux-postinstall/)
 3. Install [docker-compose for ubuntu](https://docs.docker.com/compose/install/)
 4. Install make `sudo apt install make`
+5. Install g++:
+   1. `sudo apt-get update`
+   2. `sudo apt-get install -y g++`
 
 ## Getting Started
 
@@ -52,13 +60,13 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
   
 - Disable DNP3/EtherNET/IP to use only Modbus protocol:
 
-<img src="https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/openplc1.png">
+![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/openplc1.png "OpenPLC 1")
 
 - Load the `*.st` file of the project.
   
 - Start PLC.
 
-<img src="https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/openplc2.png">  
+![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/openplc2.png "OpenPLC 2")
 
 ### Getting Started Matlab
 
@@ -75,9 +83,9 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 
   - Install Matlab Simulink as add-on:
 
-      <img src="https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink1.png">
+      ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink1.png "Simulink 1")
 
-      <img src="https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink2.png">
+      ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink2.png "Simulink 1")
 
   - Install gcc, g++, foltran:
     - `sudo apt-get update`
@@ -117,13 +125,50 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 
 - [Graphical views Scada-LTS #1961](https://github.com/SCADA-LTS/Scada-LTS/issues/1961)
 
-## How to use
+### Getting Started network
+
+#### ICSNetwork
+
+- Add permissions
+  - `cd ~/ICSVirtual/network/ICSNetwork`
+  - `sudo chmod +x scripts/*.*`
+
+#### Attacker
+
+- Compile attacker code:
+  - `cd ~/ICSVirtual/attacker`
+  - `g++ injection_attack.cpp -o injection_attack -pthread`
+- Add permissions
+  - `cd ~/ICSVirtual/network/attacker`
+  - `sudo chmod +x scripts/*.*`
+- Set enviromental variables:
+  - Copy the `.env.example` and paste in the same path.
+    - Rename `.env.example` to `.env`.
+  - Inspect the PLC container: `docker inspect <containerid>` to recover IP address of this container
+    - Set the `IP_PLC` variable.
+    - Set the `FREQ` variable.
+
+## How to use the project
+
+### Deploy ICSNetwork
+
+- `cd ~/ICSVirtual/network/ICSNetwork`
+
+- `make start`
+
+- `make stop`
+
+- `make destroy`
+
+### Deploy attacker
 
 - `cd ~/ICSVirtual/network`
 
-- `docker-compose up -d`
+- `make start`
 
-- `docker-compose down`
+- `make stop`
+
+- `make destroy`
 
 ## How to test connection
 
