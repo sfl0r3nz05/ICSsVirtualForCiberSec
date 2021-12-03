@@ -6,9 +6,10 @@ networks:
 
 services:
   attacker:
-    image: frolvlad/alpine-gxx
+    image: sflorenz05/attacker:v0.1
+    working_dir: /attacker
     volumes:
-      - ../../attacker:/home/attacker
-    command: sh "/home/attacker/injection_attack -h ${IP_PLC} -f ${FREQ}"
+      - ../../attacker:/attacker
+    command: sh "./injection_attack -h ${IP_PLC} -f ${FREQ}" #command: tail -F anything #container running forever
     networks:
       - ics
