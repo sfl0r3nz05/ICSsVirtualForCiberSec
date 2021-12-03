@@ -1,7 +1,7 @@
 
 
 // Parametros del modelo n� 1
-#include "..\ModN1.h"
+#include "../ModN1.h"
 
 // CARACTERISTICAS DE LA PLANTA
 #define NUMTANKS					1

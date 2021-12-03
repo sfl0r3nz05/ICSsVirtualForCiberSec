@@ -79,6 +79,10 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 
       <img src="https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink2.png">
 
+  - Install gcc, g++, foltran:
+    - `sudo apt-get update`
+    - `sudo apt-get install -y gcc g++ gfortran`
+  
   - [Save changes in container](https://www.mathworks.com/help/cloudcenter/ug/save-changes-in-containers.html)
     - `docker ps`
     - `docker commit <containerID> <repository>:<tag>`
@@ -87,7 +91,7 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 #### Use the matlab simulink image create for the project
 
 - Open docker-compose file `cd ~/ICSVirtual/network/`
-- Change the image of the `matlab` service by `sflorenz05/matlab_simulink:v0.1`
+- Change the image of the `matlab` service by `sflorenz05/matlab_simulink:v0.2`
   
 #### Troubleshootings Matlab on Docker
 

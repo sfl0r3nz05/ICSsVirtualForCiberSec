@@ -48,7 +48,7 @@ services:
       - ics
 
   matlab:
-    image: sflorenz05/matlab_simulink:v0.1
+    image: sflorenz05/matlab_simulink:v0.2
     shm_size: 512M
     ports:
       - "5901:5901"
