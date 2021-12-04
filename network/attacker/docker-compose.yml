@@ -10,6 +10,6 @@ services:
     working_dir: /attacker
     volumes:
       - ../../attacker:/attacker
-    command: sh "./injection_attack -h ${IP_PLC} -f ${FREQ}" #command: tail -F anything #container running forever
+    command: sh -c "./injection_attack -h ${IP_PLC} -f ${FREQ}" #command: tail -F anything #container running forever
     networks:
       - ics
