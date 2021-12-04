@@ -109,15 +109,18 @@ static void mdlInitializeSampleTimes(SimStruct *S)
 static void mdlInitializeConditions(SimStruct *S)
 {		
 	void **PWork = ssGetPWork(S);
+	real_T** Sensores;
 	int i;
 
 	for (i=0;i<NUMPARAM_SFUNCT;i++) { PWork[i] = mxGetPr(ssGetSFcnParam(S,i)); }
 
 	// Asignar Memoria para Estados Adicionales
-	ESTADOSADIC = (real_T **)malloc(sizeof(real_T *)*(NUM_ESTADOSADIC));
+	PWork[2] = (real_T **)malloc(sizeof(real_T *)*(NUM_ESTADOSADIC));
 
-	EA_SENSORES = (real_T *)malloc(sizeof(real_T)*(NUM_EASENSORES));
-	EA_NOT_USED = (real_T *)malloc(sizeof(real_T)*(NUM_EA_NOTUSED));
+	Sensores = PWork[2];
+
+	Sensores[0] = (real_T *)malloc(sizeof(real_T)*(NUM_EASENSORES));
+	Sensores[1] = (real_T *)malloc(sizeof(real_T)*(NUM_EA_NOTUSED));
 
 }
 
@@ -150,11 +153,14 @@ static void mdlOutputs(SimStruct *S, int_T tid)
 	InputRealPtrsType uPtrs0 = ssGetInputPortRealSignalPtrs(S,0); /* Influx (kg/d) */            
 	InputRealPtrsType uPtrs1 = ssGetInputPortRealSignalPtrs(S,1); /* Consignas */
 	real_T dblQRFreal;
+	real_T* Sensores;
+
+	Sensores = ((real_T **)PWork[2])[0];
 
 	if (Q_INF < QRF_INP) {dblQRFreal = Q_INF;}
 	else {dblQRFreal = QRF_INP;}
 
-	SST_EFF = F_NS*(iVSS_XB*(XBH_INF+XBA_INF) + iVSS_XI*(XI_INF + XP_INF) + iVSS_XS*XS_INF + XIN_INF);
+	SST_EFF = F_NS*(iVSS_XB * (XBH_INF + XBA_INF) + iVSS_XI * (XI_INF + XP_INF) + iVSS_XS * XS_INF + XIN_INF);
 	NH4_EFF = *uPtrs0[EST_SNH+1];
 	NO3_EFF = *uPtrs0[EST_SNO+1];
 
@@ -178,7 +184,7 @@ static void mdlOutputs(SimStruct *S, int_T tid)
 
 	//	SALIDA de SENSORES
 	y = ssGetOutputPortRealSignal(S,OP_SENSORES);
-	for (i=0;i<ANCHURAPUERTO1SALIDA ;i++) { y[i] = EA_SENSORES[i];}
+	for (i=0;i<ANCHURAPUERTO1SALIDA ;i++) { y[i] = Sensores[i];}
 	
 }
 
@@ -213,15 +219,18 @@ static void mdlDerivatives(SimStruct *S)
 static void mdlTerminate(SimStruct *S)
 {  
 	int i;
-	void **PWork = ssGetPWork(S); 
+	void **PWork = ssGetPWork(S);
+	real_T** EstAdic;
+
+	EstAdic = PWork[2];
 
 	// Memoria para estados adicionales
 	if (PWork != NULL)
 	{
 		for (i=0;i<NUM_ESTADOSADIC;i++) 
-		if (ESTADOSADIC[i] != NULL) {free(ESTADOSADIC[i]);}
+		if (EstAdic[i] != NULL) {free(EstAdic[i]);}
 	
-		if (ESTADOSADIC != NULL) {free(ESTADOSADIC);}
+		if (EstAdic != NULL) {free(EstAdic);}
 		if (LOGFILE != NULL) {fclose (LOGFILE);}	// Cierra el FICHERO
 	}
 

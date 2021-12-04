@@ -1,6 +1,6 @@
 
 
-// Parametros del modelo nï¿½ 1
+// Parametros del modelo nº 1
 #include "../ModN1.h"
 
 // CARACTERISTICAS DE LA PLANTA
@@ -53,27 +53,27 @@
 #define NUMPWORKS			4
 #define PARAM_ESTEQUIOM		((real_T *)PWork[0])
 #define PARAM_SETTL			((real_T *)PWork[1])
-#define ESTADOSADIC			((real_T **)PWork[2])	//
-#define	LOGFILE				((FILE *)PWork[3])		// Archivo para depuraciï¿½n
+#define ESTADOSADIC			PWork[2]			//
+#define	LOGFILE				PWork[3]		// Archivo para depuración
 
 
-// Parï¿½metros
-#define F_NS				PARAM_SETTL[0]      
+// Parámetros
+#define F_NS				((real_T*)PWork[1])[0]   
 
 // ESTADOS ADICIONALES DEl SISTEMA (estados adicionales a los del modelo) 
-// TODAVï¿½A SIN DEFINIR
+// TODAVÍA SIN DEFINIR
 #define NUM_ESTADOSADIC			2
-#define EA_SENSORES				ESTADOSADIC[0]
-#define EA_NOT_USED				ESTADOSADIC[1]
+#define EA_SENSORES				PWork[2][0]
+#define EA_NOT_USED				PWork[2][1]
 
 #define NUM_EASENSORES			4
 #define NUM_EA_NOTUSED			8
 
 // Elementos del vector SENSORES
-#define SST_EFF					(EA_SENSORES[0])
-#define NH4_EFF					(EA_SENSORES[1])
-#define NO3_EFF					(EA_SENSORES[2])
-#define MLSS_RECF				(EA_SENSORES[3])
+#define SST_EFF					Sensores[0]
+#define NH4_EFF					Sensores[1]
+#define NO3_EFF					Sensores[2]
+#define MLSS_RECF				Sensores[3]
 
 // _____________________________________________________________________
 
