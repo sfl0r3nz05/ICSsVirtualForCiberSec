@@ -49,7 +49,7 @@ static void mdlCheckParameters(SimStruct *S)
 	{ ssSetErrorStatus (S,"Matriz de Estequiometrias erronea");	return;	}
 
 	if (mxGetNumberOfElements(PARAMS_ASU(S)) != DIMPARAMS_ASU)       
-	{ ssSetErrorStatus (S,"Vector de Parámetros erroneo"); return; }
+	{ ssSetErrorStatus (S,"Vector de Parï¿½metros erroneo"); return; }
 	
 	if (mxGetNumberOfElements(INICIALES(S)) != (NUMESTADOSMODASM1*NUMREACTORES))
 	{ ssSetErrorStatus (S,"Vector de Estados Iniciales erroneo"); return; }
@@ -71,13 +71,13 @@ static void mdlInitializeSizes(SimStruct *S)
     #if defined (MATLAB_MEX_FILE)
 		if (ssGetNumSFcnParams(S) == ssGetSFcnParamsCount(S)) 
 		{
-		    mdlCheckParameters(S);                          // Chequear que los parámetros son correctos
+		    mdlCheckParameters(S);                          // Chequear que los parï¿½metros son correctos
 			if (ssGetErrorStatus(S) != NULL) {return;}
 		}
 		else return;	
 	#endif	
 
-	// AQUÍ LA INICIALIZACIÓN
+	// AQUï¿½ LA INICIALIZACIï¿½N
 	// Lectura de Parametros de la S-Function
 	ssSetNumPWork(S, NUMPWORKS);  //Specify the size of a block's pointer work vector
 	ssSetNumRWork(S, NUMRWORKS);  //Specify the size of a block's real work vector
@@ -300,7 +300,7 @@ void CalcularDerivFisicas(real_T *dX, SimStruct *S) // Difusiones y attachment-d
 	
 	/////////////////// BULK
 
-	// Hidráulica Entrada-salida tanque
+	// Hidrï¿½ulica Entrada-salida tanque
 	for (idcEstado=0;idcEstado<NUMESTADOSMODASM1;idcEstado++)
 	{ dX[POSINIEST(AS_UNIT)+idcEstado] =  (Q_INF*(*uPtrs0[idcEstado+1] - xC[POSINIEST(AS_UNIT)+idcEstado]))/V_ASU;}
 	
@@ -379,11 +379,7 @@ void CalcularEstadosAlgebraicos(SimStruct *S)
 	// Temperatura, pH y KLa
 	Temperature = TEMP_ML_INP;
 	
-	// Actualización de los coeficientes cinéticos
+	// Actualizaciï¿½n de los coeficientes cinï¿½ticos
 	for (i=0;i<NUMCOEFCINETICOS;i++) {CINETICOS_T[i] = CINETICOS_20[i]*pow(ARRHENIUS[i], Temperature - 20.);}
 
 }
-
-
-
-
