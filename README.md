@@ -14,6 +14,7 @@
       - [Troubleshootings Matlab on Docker](#troubleshootings-matlab-on-docker)
       - [Import Project Files into the PATH before start simulation](#import-project-files-into-the-path-before-start-simulation)
       - [Compile all *.c using mex compiler of Matlab](#compile-all-c-using-mex-compiler-of-matlab)
+      - [Run Simulink Project](#run-simulink-project)
     - [Getting started Scada-LTS](#getting-started-scada-lts)
       - [Troubleshootings Scada-LTS](#troubleshootings-scada-lts)
     - [Getting Started Attacker](#getting-started-attacker)
@@ -121,9 +122,15 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
   
   ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink4.png)
 
-- E.g.: If we go inside the `ASU Unit` folder (see the PATH in the following image) we only need to compile the `*.c`, using the command `mex ASU_UNIT.c`.
+- E.g.: If we go inside the `ASU Unit` folder (see the PATH in the following image) we only need to compile the `*.c`, using the command `mex ASU_UNIT.c`. **Important:** `*.mexa64` files are generated.
   
   ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink5.png "Simulink 5")
+
+#### Run Simulink Project
+
+- Once all the code has been compiled, a new window opens with the simulink project, which must be launched. It must be obtained values like the ones shown in highlighted in the following figure.
+  
+  ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink6.png)
 
 ### Getting started Scada-LTS
 
