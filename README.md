@@ -119,7 +119,7 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 
 - The `*.c` version of all of the following folders must be compiled using mex:
   
-  ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink4.png "Simulink 4")
+  ![](https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png | width=100)
 
 - E.g.: If we go inside the `ASU Unit` folder (see the PATH in the following image) we only need to compile the `*.c`, using the command `mex ASU_UNIT.c`.
   
