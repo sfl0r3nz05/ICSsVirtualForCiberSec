@@ -135,14 +135,8 @@ static void mdlInitializeConditions(SimStruct *S)
 
 	for (i=0;i<NUMESTADOSCONTINUOS;i++)	{xC[i] = x0[i];}  //Se carga en el vector "xC" los valores iniciales                                                        
 
-	CINETICOS_T = (real_T *)malloc(sizeof(real_T)*(NUMCOEFCINETICOS));
-
-	// Asignar Memoria para Estados Adicionales
-	ESTADOSADIC = (real_T **)malloc(sizeof(real_T *)*(NUM_ESTADOSADIC));
-
-	EA_SENSORES = (real_T *)malloc(sizeof(real_T)*(NUM_EASENSORES));
-	EA_NOT_USED = (real_T *)malloc(sizeof(real_T)*(NUM_EA_NOTUSED));
-
+	PWork[6] = (real_T *)malloc(sizeof(real_T)*(NUMCOEFCINETICOS));
+	PWork[7] = (real_T *)malloc(sizeof(real_T)*(NUM_SENSORES));
 	
 }
 
@@ -177,7 +171,10 @@ static void mdlOutputs(SimStruct *S, int_T tid)
 	InputRealPtrsType uPtrs0 = ssGetInputPortRealSignalPtrs(S,0); /* Influx (kg/d) */            
 	InputRealPtrsType uPtrs1 = ssGetInputPortRealSignalPtrs(S,1); /* Consignas */
 	void CalcularEstadosAlgebraicos(SimStruct *);
+	real_T *Sensores;
 
+	Sensores = SENSORES;
+	
 	CalcularEstadosAlgebraicos(S);
 
 	// SENSORES
@@ -191,7 +188,7 @@ static void mdlOutputs(SimStruct *S, int_T tid)
 	
 	//	SALIDA de SENSORES
 	y = ssGetOutputPortRealSignal(S,OP_SENSORES);
-	for (i=0;i<ANCHURAPUERTO1SALIDA ;i++) { y[i] = EA_SENSORES[i];}
+	for (i=0;i<ANCHURAPUERTO1SALIDA ;i++) { y[i] = Sensores[i];}
 	
 	// OUTPUT FLUX
 	y = ssGetOutputPortRealSignal(S,OP_OUTFLUX);
@@ -241,7 +238,6 @@ static void mdlDerivatives(SimStruct *S)
 
 	//SO_Sat = 14.65 - 0.41 * TEMP_INP + 0.00799 * pow(TEMP_INP,2)  - 0.0000778 * pow(TEMP_INP,3);
 		
-	
 	RHO_W = 999.842594 + 6.793052E-2*TEMP_ML_INP - 9.095290E-3*pow(TEMP_ML_INP,2)+ 1.001685E-4*pow(TEMP_ML_INP,3) 
 				- 1.120083E-6*pow(TEMP_ML_INP,4) + 6.536332E-9*pow(TEMP_ML_INP,5);
 	
@@ -267,15 +263,17 @@ static void mdlDerivatives(SimStruct *S)
 static void mdlTerminate(SimStruct *S)
 {  
 	int i;
-	void **PWork = ssGetPWork(S); 
+	void **PWork = ssGetPWork(S);
+	real_T* Sensores;
+
+	Sensores = (real_T*)PWork[7];
+
 
 	if (CINETICOS_T != NULL) {free(CINETICOS_T);}
 
 	// Memoria para estados adicionales
-	for (i=0;i<NUM_ESTADOSADIC;i++) 
-		if (ESTADOSADIC[i] != NULL) {free(ESTADOSADIC[i]);}
+	if (Sensores != NULL) {free(Sensores);}
 	
-	if (ESTADOSADIC != NULL) {free(ESTADOSADIC);}
 	if (LOGFILE != NULL) {fclose (LOGFILE);}	// Cierra el FICHERO
 }
 
@@ -316,6 +314,10 @@ void CalcConversionTerm(real_T *dX, real_T *xC, SimStruct *S)
 	double Rho1,Rho2,Rho3,Rho4,Rho5,Rho6,Rho7,Rho8, Rho9;
 	double MonodSS, MonodSNH, SubMonodXS, MonodXS, SwitzeSOhet;
 	double SwitchSOhet, SwitchSOaut, SwitchSNHhet, SwitchSNHaut, SwitchSNOhet;
+	
+	real_T *Sensores;
+
+	Sensores = SENSORES;
 	
 	// __________________________________________________________________________	
 	// MONOD Y SWITCHING FUNCTIONS
@@ -373,6 +375,11 @@ void CalcularEstadosAlgebraicos(SimStruct *S)
 	void **PWork = ssGetPWork(S);
 	InputRealPtrsType uPtrs0 = ssGetInputPortRealSignalPtrs(S,0); /* Influx (kg/d) */            
 	InputRealPtrsType uPtrs1 = ssGetInputPortRealSignalPtrs(S,1); /* Consignas */
+	real_T *Cineticos_T;
+	real_T *Sensores;
+
+	Cineticos_T = CINETICOS_T;
+	Sensores = SENSORES;
 
 	MLSS_ASU = iVSS_XB*(XBH_ASU+XBA_ASU) + iVSS_XI*(XI_ASU + XP_ASU) + iVSS_XS*XS_ASU + XIN_ASU;
 
@@ -380,6 +387,10 @@ void CalcularEstadosAlgebraicos(SimStruct *S)
 	Temperature = TEMP_ML_INP;
 	
 	// Actualizaci�n de los coeficientes cin�ticos
-	for (i=0;i<NUMCOEFCINETICOS;i++) {CINETICOS_T[i] = CINETICOS_20[i]*pow(ARRHENIUS[i], Temperature - 20.);}
+	for (i=0;i<NUMCOEFCINETICOS;i++) { Cineticos_T[i] = CINETICOS_20[i]*pow(ARRHENIUS[i], Temperature - 20.);}
 
 }
+
+
+
+

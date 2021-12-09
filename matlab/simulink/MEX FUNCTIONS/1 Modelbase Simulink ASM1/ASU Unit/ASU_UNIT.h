@@ -1,6 +1,6 @@
 
 
-// Parametros del modelo n� 1
+// Parametros del modelo n 1
 #include "../ModN1.h"
 
 // CARACTERISTICAS DE LA PLANTA
@@ -27,7 +27,7 @@
 #define OP_SENSORES					0
 #define OP_OUTFLUX					1
 
-#define ANCHURAPUERTO1SALIDA		NUM_EASENSORES				// Sensores            
+#define ANCHURAPUERTO1SALIDA		NUM_SENSORES				// Sensores            
 #define ANCHURAPUERTO2SALIDA		(1+NUMESTADOSMODASM1)
 
 
@@ -74,10 +74,10 @@
 #define ARRHENIUS			((real_T *)PWork[2])
 #define ESTEQU				((real_T *)PWork[3])
 #define PARAM_ASU			((real_T *)PWork[4])
-#define x0					((real_T *)PWork[5])	// Estados iniciales
-#define CINETICOS_T			((real_T *)PWork[6])	// VECTOR DE PARAMETROS CINETICOS A TEMPERATURA T
-#define ESTADOSADIC			((real_T **)PWork[7])	//
-#define	LOGFILE				((FILE *)PWork[8])		// Archivo para depuraci�n
+#define x0					((real_T *)PWork[5])		// Estados iniciales
+#define CINETICOS_T			((real_T *)PWork[6])					// VECTOR DE PARAMETROS CINETICOS A TEMPERATURA T
+#define SENSORES			((real_T *)PWork[7])		//
+#define	LOGFILE				((FILE *)PWork[8])			// Archivo para depuraci�n
 
 
 // Par�metros
@@ -86,28 +86,18 @@
 #define H_TANK				PARAM_ASU[2]			// Effective depth in tanks (m)
 #define BETA_FCT			PARAM_ASU[3]
 
-
-// ESTADOS ADICIONALES DEl SISTEMA (estados adicionales a los del modelo) 
-// TODAV�A SIN DEFINIR
-#define NUM_ESTADOSADIC			2
-#define EA_SENSORES				ESTADOSADIC[0]
-#define EA_NOT_USED				ESTADOSADIC[1]
-
-
-#define NUM_EASENSORES			9
-#define NUM_EA_NOTUSED			8
-
+#define NUM_SENSORES		9
 
 // Elementos del vector SENSORES
-#define Q_in					(EA_SENSORES[0])
-#define Q_w						(EA_SENSORES[1])
-#define NO3_ASU					(EA_SENSORES[2])
-#define NH4_ASU					(EA_SENSORES[3])
-#define DO_ASU					(EA_SENSORES[4])
-#define MLSS_ASU				(EA_SENSORES[5])
-#define KLa_ASU					(EA_SENSORES[6])
-#define Temperature				(EA_SENSORES[7])
-#define OUR						(EA_SENSORES[8])
+#define Q_in					Sensores[0]
+#define Q_w						Sensores[1]
+#define NO3_ASU					Sensores[2]
+#define NH4_ASU					Sensores[3]
+#define DO_ASU					Sensores[4]
+#define MLSS_ASU				Sensores[5]
+#define KLa_ASU					Sensores[6]
+#define Temperature				Sensores[7]
+#define OUR						Sensores[8]
 
 // _____________________________________________________________________
 
