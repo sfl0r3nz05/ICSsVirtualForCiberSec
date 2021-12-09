@@ -119,9 +119,11 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 
 - The `*.c` version of all of the following folders must be compiled using mex:
   
-  ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink3.png "Simulink 4")
+  ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink4.png "Simulink 4")
 
-- E.g.:
+- E.g.: If we go inside the `ASU Unit` folder (see the PATH in the following image) we only need to compile the `*.c`, using the command `mex ASU_UNIT.c`.
+  
+  ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink5.png "Simulink 5")
 
 ### Getting started Scada-LTS
 
