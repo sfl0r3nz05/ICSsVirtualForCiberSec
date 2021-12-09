@@ -40,7 +40,7 @@ static void mdlCheckParameters(SimStruct *S)
 	{ ssSetErrorStatus (S,"Vector de Params erroneo");	return;	}
 
 	if (mxGetNumberOfElements(PARAMS_SETTLER(S)) != DIMPARAMS_SETTLER)       
-	{ ssSetErrorStatus (S,"Vector de Parï¿½metros erroneo"); return; }
+	{ ssSetErrorStatus (S,"Vector de Parámetros erroneo"); return; }
 	
 }
 #endif // MDL_CHECK_PARAMETERS
@@ -57,13 +57,13 @@ static void mdlInitializeSizes(SimStruct *S)
     #if defined (MATLAB_MEX_FILE)
 		if (ssGetNumSFcnParams(S) == ssGetSFcnParamsCount(S)) 
 		{
-		    mdlCheckParameters(S);                          // Chequear que los parï¿½metros son correctos
+		    mdlCheckParameters(S);                          // Chequear que los parámetros son correctos
 			if (ssGetErrorStatus(S) != NULL) {return;}
 		}
 		else return;	
 	#endif	
 
-	// AQUï¿½ LA INICIALIZACIï¿½N
+	// AQUÍ LA INICIALIZACIÓN
 	// Lectura de Parametros de la S-Function
 	ssSetNumPWork(S, NUMPWORKS);  //Specify the size of a block's pointer work vector
 
@@ -115,7 +115,12 @@ static void mdlInitializeConditions(SimStruct *S)
 	for (i=0;i<NUMPARAM_SFUNCT;i++) { PWork[i] = mxGetPr(ssGetSFcnParam(S,i)); }
 
 	// Asignar Memoria para Estados Adicionales
-	PWork[2] = (real_T *)malloc(sizeof(real_T)*(NUM_SENSORES));
+	PWork[2] = (real_T **)malloc(sizeof(real_T *)*(NUM_ESTADOSADIC));
+
+	Sensores = PWork[2];
+
+	Sensores[0] = (real_T *)malloc(sizeof(real_T)*(NUM_EASENSORES));
+	Sensores[1] = (real_T *)malloc(sizeof(real_T)*(NUM_EA_NOTUSED));
 
 }
 
@@ -150,7 +155,7 @@ static void mdlOutputs(SimStruct *S, int_T tid)
 	real_T dblQRFreal;
 	real_T* Sensores;
 
-	Sensores = ((real_T *)PWork[2]);
+	Sensores = ((real_T **)PWork[2])[0];
 
 	if (Q_INF < QRF_INP) {dblQRFreal = Q_INF;}
 	else {dblQRFreal = QRF_INP;}
@@ -215,14 +220,18 @@ static void mdlTerminate(SimStruct *S)
 {  
 	int i;
 	void **PWork = ssGetPWork(S);
-	real_T* Sensores;
+	real_T** EstAdic;
 
-	Sensores = (real_T*)PWork[2];
+	EstAdic = PWork[2];
 
 	// Memoria para estados adicionales
 	if (PWork != NULL)
 	{
-		if (Sensores != NULL) {free(Sensores);}
+		for (i=0;i<NUM_ESTADOSADIC;i++) 
+		if (EstAdic[i] != NULL) {free(EstAdic[i]);}
+	
+		if (EstAdic != NULL) {free(EstAdic);}
+		if (LOGFILE != NULL) {fclose (LOGFILE);}	// Cierra el FICHERO
 	}
 
 }

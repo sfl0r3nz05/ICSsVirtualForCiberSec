@@ -1,6 +1,6 @@
 
 
-// Parametros del modelo nï¿½ 1
+// Parametros del modelo nº 1
 #include "../ModN1.h"
 
 // CARACTERISTICAS DE LA PLANTA
@@ -27,7 +27,7 @@
 #define OP_OUTFLUX_EFF				1
 #define OP_OUTFLUX_REC				2
 
-#define ANCHURAPUERTO1SALIDA		NUM_SENSORES				// Sensores            
+#define ANCHURAPUERTO1SALIDA		NUM_EASENSORES				// Sensores            
 #define ANCHURAPUERTO2SALIDA		(1+NUMESTADOSMODASM1)								
 #define ANCHURAPUERTO3SALIDA		(1+NUMESTADOSMODASM1)
 
@@ -50,16 +50,24 @@
 // ASIGNACION DE VECTORES DE TRABAJO
 ////////////////////////////////////////////////////////////////////////
 // Vectores de TRABAJO
-#define NUMPWORKS			3
+#define NUMPWORKS			4
 #define PARAM_ESTEQUIOM		((real_T *)PWork[0])
 #define PARAM_SETTL			((real_T *)PWork[1])
-#define SENSORES			((real_T *)PWork[2])
+#define ESTADOSADIC			PWork[2]			//
+#define	LOGFILE				PWork[3]		// Archivo para depuración
 
 
-// Parï¿½metros
+// Parámetros
 #define F_NS				((real_T*)PWork[1])[0]   
 
-#define NUM_SENSORES			4
+// ESTADOS ADICIONALES DEl SISTEMA (estados adicionales a los del modelo) 
+// TODAVÍA SIN DEFINIR
+#define NUM_ESTADOSADIC			2
+#define EA_SENSORES				PWork[2][0]
+#define EA_NOT_USED				PWork[2][1]
+
+#define NUM_EASENSORES			4
+#define NUM_EA_NOTUSED			8
 
 // Elementos del vector SENSORES
 #define SST_EFF					Sensores[0]
