@@ -114,7 +114,6 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 
 ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink3.png "Simulink 3")
 
-
 ### Getting started Scada-LTS
 
 - Once Scada-LTS container is running:
