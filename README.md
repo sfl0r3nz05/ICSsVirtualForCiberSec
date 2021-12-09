@@ -12,6 +12,7 @@
       - [Create your own Matlab Simulink image](#create-your-own-matlab-simulink-image)
       - [Use the matlab simulink image created for the project](#use-the-matlab-simulink-image-created-for-the-project)
       - [Troubleshootings Matlab on Docker](#troubleshootings-matlab-on-docker)
+      - [Import Project Files into the PATH before start simulation](#import-project-files-into-the-path-before-start-simulation)
     - [Getting started Scada-LTS](#getting-started-scada-lts)
       - [Troubleshootings Scada-LTS](#troubleshootings-scada-lts)
     - [Getting Started Attacker](#getting-started-attacker)
@@ -108,6 +109,11 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 
 - [Matlab from docker-compose #39](https://github.com/mathworks-ref-arch/matlab-dockerfile/issues/39)
 - [Installing Simulink as a Docker Matlab add-on #40](https://github.com/mathworks-ref-arch/matlab-dockerfile/issues/40)
+
+#### Import Project Files into the PATH before start simulation
+
+![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink3.png "Simulink 3")
+
 
 ### Getting started Scada-LTS
 
