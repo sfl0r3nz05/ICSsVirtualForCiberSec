@@ -105,7 +105,7 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 #### Use the matlab simulink image created for the project
 
 - Open docker-compose file `cd ~/ICSVirtual/network/ICSNetwork`
-- Change the image of the `matlab` service by `sflorenz05/attacker:v0.2`
+- Change the image of the `matlab` service by `sflorenz05/matlab_simulink:v0.2`
   
 #### Troubleshootings Matlab on Docker
 
@@ -122,6 +122,13 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
   
   ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink4.png)
 
+  - The code has been tunned, hence there are some versions.
+  - The latest version is also renamed before be compiled.
+    - E.g.: `ASU Unit folder`:
+      - Latest versions: `ASU_UNIT_V2.c` and `ASU_UNIT_V2.h` have been renamed to:
+      - `ASU_UNIT.c` and `ASU_UNIT.c`
+
+- All files has been compiled by default
 - E.g.: If we go inside the `ASU Unit` folder (see the PATH in the following image) we only need to compile the `*.c`, using the command `mex ASU_UNIT.c`. **Important:** `*.mexa64` files are generated.
   
   ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink5.png "Simulink 5")
@@ -162,7 +169,7 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 #### Use the attacker image created for the project
 
 - Open docker-compose file `cd ~/ICSVirtual/network/attacker`
-- Change the image of the `matlab` service by `sflorenz05/matlab_simulink:v0.2`
+- Change the image of the `matlab` service by `sflorenz05/attacker:v0.1`
 
 ### Getting Started network
 
