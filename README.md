@@ -133,7 +133,7 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
   
   ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink6.png)
 
-- The values displayed on the screens should be close to the values highlighted in the following figure.
+- The values displayed on the displays should be close to the values highlighted in the following figure.
   
   ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink7.png)
 
