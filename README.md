@@ -129,9 +129,13 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 
 #### Run Simulink Project
 
-- Once all the code has been compiled, a new window opens with the simulink project, which must be launched. It must be obtained values like the ones shown in highlighted in the following figure.
+- Once all the code has been successfully compiled the Simulink Project is executed with double clic in the `*.slx`. E.g.: `Remedy_WWTP.slx`
   
   ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink6.png)
+
+- The values displayed on the screens should be close to the values highlighted in the following figure.
+  
+  ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink7.png)
 
 ### Getting started Scada-LTS
 
