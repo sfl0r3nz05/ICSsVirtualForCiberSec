@@ -122,12 +122,6 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
   
   ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink4.png)
 
-  - The code has been tunned, hence there are some versions.
-  - The latest version is also renamed before be compiled.
-    - E.g.: `ASU Unit folder`:
-      - Latest versions: `ASU_UNIT_V2.c` and `ASU_UNIT_V2.h` have been renamed to:
-      - `ASU_UNIT.c` and `ASU_UNIT.c`
-
 - All files has been compiled by default
 - E.g.: If we go inside the `ASU Unit` folder (see the PATH in the following image) we only need to compile the `*.c`, using the command `mex ASU_UNIT.c`. **Important:** `*.mexa64` files are generated.
   
