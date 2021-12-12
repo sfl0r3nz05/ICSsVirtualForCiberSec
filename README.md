@@ -1,4 +1,4 @@
-# ICS Virtual
+# Industrial cibersecurity laboratory deployment for ICS device virtualization and ciberattack testing
 
 - [ICS Virtual](#ics-virtual)
   - [Description](#description)
