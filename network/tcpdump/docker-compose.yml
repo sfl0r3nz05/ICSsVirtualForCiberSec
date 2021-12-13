@@ -1,9 +1,5 @@
 version: '3'
 
-networks:
-  ics:
-    driver: bridge
-
 services:
 
   tcpdump:
