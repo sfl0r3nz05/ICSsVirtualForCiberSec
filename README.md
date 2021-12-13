@@ -186,11 +186,11 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 - To deploy as part of the Docker Infrastructure `kaazing/tcpdump` image is [used](https://hub.docker.com/r/kaazing/tcpdump).
 - Once the `tcpdump` container is deployed an `*.pcap` file is included as part of the `tcpdump` folder.
 
-  ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink7.png)
+  ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/tcpdump1.png)
 
 - Once `*.pcap` file is downloaded, it can be opened using Wireshark.
   
-  ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink7.png)
+  ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/tcpdump2.png)
 
 #### Attacker
 
