@@ -1,6 +1,6 @@
 # Industrial cibersecurity laboratory deployment for ICS device virtualization and ciberattack testing
 
-- [ICS Virtual](#ics-virtual)
+- [Industrial cibersecurity laboratory deployment for ICS device virtualization and ciberattack testing](#industrial-cibersecurity-laboratory-deployment-for-ics-device-virtualization-and-ciberattack-testing)
   - [Description](#description)
   - [Requirements](#requirements)
   - [Getting Started](#getting-started)
@@ -22,10 +22,13 @@
       - [Use the attacker image created for the project](#use-the-attacker-image-created-for-the-project)
     - [Getting Started network](#getting-started-network)
       - [ICSNetwork](#icsnetwork)
+    - [Getting Started attacker](#getting-started-attacker-1)
       - [Attacker](#attacker)
+  - [Capturing traffic via TCPDump](#capturing-traffic-via-tcpdump)
   - [How to use the project](#how-to-use-the-project)
     - [Deploy ICSNetwork](#deploy-icsnetwork)
     - [Deploy attacker](#deploy-attacker)
+    - [Deploy tcpdump](#deploy-tcpdump)
   - [How to test connection](#how-to-test-connection)
     - [Install/use ping network tool](#installuse-ping-network-tool)
 
@@ -177,6 +180,18 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
   - `cd ~/ICSVirtual/network/ICSNetwork`
   - `sudo chmod +x scripts/*.*`
 
+### Getting Started attacker
+
+- To capture the traffic into the ICSNetwork the [TCPDump](https://www.tcpdump.org/) tool is used.
+- To deploy as part of the Docker Infrastructure `kaazing/tcpdump` image is [used](https://hub.docker.com/r/kaazing/tcpdump).
+- Once the `tcpdump` container is deployed an `*.pcap` file is included as part of the `tcpdump` folder.
+
+  ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink7.png)
+
+- Once `*.pcap` file is downloaded, it can be opened using Wireshark.
+  
+  ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink7.png)
+
 #### Attacker
 
 - Compile attacker code:
@@ -192,6 +207,8 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
     - Set the `IP_PLC` variable.
     - Set the `FREQ` variable.
 
+## Capturing traffic via TCPDump
+
 ## How to use the project
 
 ### Deploy ICSNetwork
@@ -206,7 +223,17 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 
 ### Deploy attacker
 
-- `cd ~/ICSVirtual/network`
+- `cd ~/ICSVirtual/network/attacker`
+
+- `make start`
+
+- `make stop`
+
+- `make destroy`
+
+### Deploy tcpdump
+
+- `cd ~/ICSVirtual/network/tcpdump`
 
 - `make start`
 
