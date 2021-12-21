@@ -147,20 +147,13 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
   - Access to Scada-LTS GUI: [http://localhost:8080/Scada-LTS/](http://localhost:8080/Scada-LTS/)
   - Login with `username`: admin `password`: admin
   - Create empty script in "Scripting"
+  ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/experimental1/images/scada2.png)
   
-    ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/experimental1/images/scada1.png)
-  
-    E.g.:
-        ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/experimental1/images/scada2.png)
-  
-  - Next go to the "SQL" tab
-    ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/experimental1/images/scada3.png)
-  
+  - Next go to the "SQL" tab  
   - Paste content scripts-one-insert.txt file into the text field "SQL"
-    - File `scripts-one-insert.txt` is placed into `~/ICSVirtual/scada-lts/scripts`.
   
-    E.g.:
-        ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/experimental1/images/scada4.png)
+  - File `scripts-one-insert.txt` is placed into `~/ICSVirtual/scada-lts/scripts`.
+  ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/experimental1/images/scada4.png)
   
   - Click "Submit update"
   - If the operation is successful, the information about adding 12 records will be displayed
