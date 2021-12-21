@@ -170,6 +170,8 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
   ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/experimental1/images/scada4.png)
 
   - Add the background image at "Graphical views"
+    - E.g.: file `background.png` is placed into `~/ICSVirtual/scada-lts/sample/`
+  ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/experimental1/images/scada5.png)
 
 #### Troubleshootings Scada-LTS
 
