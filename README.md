@@ -18,7 +18,7 @@
     - [Getting started Scada-LTS](#getting-started-scada-lts)
       - [Troubleshootings Scada-LTS](#troubleshootings-scada-lts)
     - [Getting Started Attacker](#getting-started-attacker)
-      - [Create your own Attacker image](#create-your-own-attacker-image)
+      - [Create your own Attacker Docker image](#create-your-own-attacker-docker-image)
       - [Use the attacker image created for the project](#use-the-attacker-image-created-for-the-project)
     - [Getting Started network](#getting-started-network)
       - [ICSNetwork](#icsnetwork)
@@ -161,7 +161,7 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 
 ### Getting Started Attacker
 
-#### Create your own Attacker image
+#### Create your own Attacker Docker image
 
 - Go to attacker folder `cd ~/ICSVirtual/attacker`
 - Compile `injection_attack.cpp` file `g++ injection_attack.cpp -o injection_attack -pthread`
