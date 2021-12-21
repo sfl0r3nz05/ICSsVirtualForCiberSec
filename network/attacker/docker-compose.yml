@@ -1,8 +1,8 @@
 version: '3'
 
 networks:
-  ics:
-    driver: bridge
+  icsnetwork_ics:
+    external: true
 
 services:
   attacker:
@@ -12,4 +12,4 @@ services:
       - ../../attacker:/attacker
     command: sh -c "./injection_attack -h ${IP_PLC} -f ${FREQ}" #command: tail -F anything #container running forever
     networks:
-      - ics
+      - icsnetwork_ics
