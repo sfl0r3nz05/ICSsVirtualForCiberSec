@@ -167,11 +167,12 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
   - Add a data source running on port 502 with host:openplc
   - Make the connection with OpenPLC
 
-  ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/experimental1/images/scada4.png)
+    ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/experimental1/images/scada4.png)
 
   - Add the background image at "Graphical views"
     - E.g.: file `background.png` is placed into `~/ICSVirtual/scada-lts/sample/`
-  ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/experimental1/images/scada5.png)
+  
+    ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/experimental1/images/scada5.png)
 
 #### Troubleshootings Scada-LTS
 
