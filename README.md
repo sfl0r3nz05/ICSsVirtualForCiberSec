@@ -160,6 +160,10 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
   ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/experimental1/images/scada2.png)
   
   - Then import the project (.json file)
+    - E.g.: file `Water Heater 3 Stations.json` is placed into `~/ICSVirtual/scada-lts/sample/`
+
+  ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/experimental1/images/scada3.png)
+
   - Add a data source running on port 502 with host:openplc
   - Make the connection with OpenPLC
   - Add the background image at "Graphical views"
