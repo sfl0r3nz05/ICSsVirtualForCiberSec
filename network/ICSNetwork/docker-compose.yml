@@ -41,8 +41,6 @@ services:
     ports:
       - "502:502"
       - "8081:8080"
-    volumes:
-      - ../../openplc:/home/openplc/scripts
     command: -privileged
     networks:
       - ics
