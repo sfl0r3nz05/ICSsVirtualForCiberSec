@@ -9,7 +9,7 @@
       - [Use the OpenPLC image created for the project](#use-the-openplc-image-created-for-the-project)
       - [Follow this recommendation [Only for Modbus]](#follow-this-recommendation-only-for-modbus)
     - [Getting Started Matlab](#getting-started-matlab)
-      - [Create your own Matlab Simulink image](#create-your-own-matlab-simulink-image)
+      - [Create your own Matlab Simulink Docker image](#create-your-own-matlab-simulink-docker-image)
       - [Use the matlab simulink image created for the project](#use-the-matlab-simulink-image-created-for-the-project)
       - [Troubleshootings Matlab on Docker](#troubleshootings-matlab-on-docker)
       - [Import Project Files into the PATH before start simulation](#import-project-files-into-the-path-before-start-simulation)
@@ -79,7 +79,7 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 
 ### Getting Started Matlab
 
-#### Create your own Matlab Simulink image
+#### Create your own Matlab Simulink Docker image
 
 - Run the MATLAB container using this command:
       `docker run -it -p 5901:5901 -p 6080:6080 --shm-size=512M mathworks/matlab:r20XYz -vnc`
