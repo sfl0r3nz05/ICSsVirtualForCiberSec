@@ -147,11 +147,11 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
   - Login with `username`: admin `password`: admin
   - Create empty script in "Scripting"
   
-    ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/scada1.png)
+    ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/experimental1/images/scada1.png)
 
     - E.g.:
 
-        ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/scada2.png)
+        ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/experimental1/images/scada2.png)
 
   - Next go to the "SQL" tab
   - Paste content scripts-one-insert.txt file into the text field "SQL"
