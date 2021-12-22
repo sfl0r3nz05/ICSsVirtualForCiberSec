@@ -17,14 +17,12 @@
       - [Run Simulink Project](#run-simulink-project)
     - [Getting started Scada-LTS](#getting-started-scada-lts)
       - [Troubleshootings Scada-LTS](#troubleshootings-scada-lts)
+    - [Getting Started network ICSNetwork](#getting-started-network-icsnetwork)
     - [Getting Started Attacker](#getting-started-attacker)
       - [Create your own Attacker Docker image](#create-your-own-attacker-docker-image)
       - [Use the attacker image created for the project](#use-the-attacker-image-created-for-the-project)
-    - [Getting Started network](#getting-started-network)
-      - [ICSNetwork](#icsnetwork)
-    - [Getting Started attacker](#getting-started-attacker-1)
-      - [Attacker](#attacker)
-  - [Capturing traffic via TCPDump](#capturing-traffic-via-tcpdump)
+      - [Deploying Attacker](#deploying-attacker)
+    - [Getting Started TCPDump](#getting-started-tcpdump)
   - [How to use the project](#how-to-use-the-project)
     - [Deploy ICSNetwork](#deploy-icsnetwork)
     - [Deploy attacker](#deploy-attacker)
@@ -178,6 +176,12 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 
 - [Graphical views Scada-LTS #1961](https://github.com/SCADA-LTS/Scada-LTS/issues/1961)
 
+### Getting Started network ICSNetwork
+
+- Add permissions
+  - `cd ~/ICSVirtual/network/ICSNetwork`
+  - `sudo chmod +x scripts/*.*`
+
 ### Getting Started Attacker
 
 #### Create your own Attacker Docker image
@@ -191,27 +195,7 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 - Open docker-compose file `cd ~/ICSVirtual/network/attacker`
 - Change the image of the `matlab` service by `sflorenz05/attacker:v0.1`
 
-### Getting Started network
-
-#### ICSNetwork
-
-- Add permissions
-  - `cd ~/ICSVirtual/network/ICSNetwork`
-  - `sudo chmod +x scripts/*.*`
-
-### Getting Started attacker
-
-- To capture the traffic into the ICSNetwork the [TCPDump](https://www.tcpdump.org/) tool is used.
-- To deploy as part of the Docker Infrastructure `kaazing/tcpdump` image is [used](https://hub.docker.com/r/kaazing/tcpdump).
-- Once the `tcpdump` container is deployed an `*.pcap` file is included as part of the `tcpdump` folder.
-
-  ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/tcpdump1.png)
-
-- Once `*.pcap` file is downloaded, it can be opened using Wireshark.
-  
-  ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/tcpdump2.png)
-
-#### Attacker
+#### Deploying Attacker
 
 - Compile attacker code:
   - `cd ~/ICSVirtual/attacker`
@@ -226,7 +210,17 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
     - Set the `IP_PLC` variable.
     - Set the `FREQ` variable.
 
-## Capturing traffic via TCPDump
+### Getting Started TCPDump
+
+- To capture the traffic into the ICSNetwork the [TCPDump](https://www.tcpdump.org/) tool is used.
+- To deploy as part of the Docker Infrastructure `kaazing/tcpdump` image is [used](https://hub.docker.com/r/kaazing/tcpdump).
+- Once the `tcpdump` container is deployed an `*.pcap` file is included as part of the `tcpdump` folder.
+
+  ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/tcpdump1.png)
+
+- Once `*.pcap` file is downloaded, it can be opened using Wireshark.
+  
+  ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/tcpdump2.png)
 
 ## How to use the project
 
