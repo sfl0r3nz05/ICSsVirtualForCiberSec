@@ -145,8 +145,8 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
   - Access to Scada-LTS GUI: [http://localhost:8080/Scada-LTS/](http://localhost:8080/Scada-LTS/).
   - Login with `username`: admin `password`: admin.
   - Create empty script in "Scripting".
-  
-  ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/scada1.png)
+
+      ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/scada1.png)
 
   - Next go to the "SQL" tab.
   - Paste content scripts-one-insert.txt file into the text field "SQL".
@@ -154,13 +154,13 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
   - File `scripts-one-insert.txt` is placed into `~/ICSVirtual/scada-lts/scripts`.
   - Click "Submit update"
   - If the operation is successful, the information about adding 12 records will be displayed.
-  
+
       ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/scada2.png)
   
   - Then import the project (.json file).
     - E.g.: file `Water Heater 3 Stations.json` is placed into `~/ICSVirtual/scada-lts/sample/`
 
-      ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/scada3.png)
+        ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/scada3.png)
 
   - Add a data source running on port 502 with host:openplc.
   - Make the connection with OpenPLC.
@@ -168,9 +168,9 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
       ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/scada4.png)
 
   - Add the background image at "Graphical views".
-    - E.g.: file `background.png` is placed into `~/ICSVirtual/scada-lts/sample/`.
-  
-      ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/scada5.png)
+    - E.g.: file `background.png` is placed into `~/ICSVirtual/scada-lts/sample/`
+
+        ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/scada5.png)
 
 #### Troubleshootings Scada-LTS
 
@@ -266,4 +266,4 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 
 - `sudo apt-get install iputils-ping`
   
-- ping: `e.g.: ping 192.168.144.3`
+- e.g.: `ping 192.168.144.3`
