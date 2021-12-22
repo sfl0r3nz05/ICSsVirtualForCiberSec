@@ -38,10 +38,10 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 
 ## Requirements
 
-1. Install [docker for ubuntu](https://docs.docker.com/engine/install/ubuntu/)
-2. [Manage Docker as non-root user](https://docs.docker.com/engine/install/linux-postinstall/)
-3. Install [docker-compose for ubuntu](https://docs.docker.com/compose/install/)
-4. Install make `sudo apt install make`
+1. Install [docker for ubuntu](https://docs.docker.com/engine/install/ubuntu/).
+2. [Manage Docker as non-root user](https://docs.docker.com/engine/install/linux-postinstall/).
+3. Install [docker-compose for ubuntu](https://docs.docker.com/compose/install/).
+4. Install make `sudo apt install make`.
 5. Install g++:
    1. `sudo apt-get update`
    2. `sudo apt-get install -y g++`
@@ -58,8 +58,8 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
   
 #### Use the OpenPLC image created for the project
 
-- Open docker-compose file `cd ~/ICSVirtual/network/ICSNetwork`
-- Change the image of the `openplc` service by `sflorenz05/open-plc:v0.1`
+- Open docker-compose file `cd ~/ICSVirtual/network/ICSNetwork`.
+- Change the image of the `openplc` service by `sflorenz05/open-plc:v0.1`.
 
 #### Follow this recommendation [Only for Modbus]
 
@@ -70,7 +70,7 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/openplc1.png "OpenPLC 1")
 
 - Load the `*.st` file of the project.
-  - E.g.: file `water_heater.st` is placed into `~/ICSVirtual/openplc/sample/`
+  - E.g.: file `water_heater.st` is placed into `~/ICSVirtual/openplc/sample/`.
   
 - Start PLC.
 
@@ -85,9 +85,9 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 
   - :r20XYz chooses the release version of the MATLAB container.
   
-  - Open a bash for the Matlab container: e.g.: `docker exec -it <containerID> bash`
+  - Open a bash for the Matlab container: e.g.: `docker exec -it <containerID> bash`.
   
-  - Run Matlab with `root` permissions: `sudo matlab`
+  - Run Matlab with `root` permissions: `sudo matlab`.
 
   - Install Matlab Simulink as add-on:
 
@@ -102,17 +102,17 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
   - [Save changes in container](https://www.mathworks.com/help/cloudcenter/ug/save-changes-in-containers.html)
     - `docker ps`
     - `docker commit <containerID> <repository>:<tag>`
-      - E.g.: `docker commit 3d555451f07a mymatlab:r2020a`
+      - E.g.: `docker commit 3d555451f07a mymatlab:r2020a`.
 
 #### Use the matlab simulink image created for the project
 
-- Open docker-compose file `cd ~/ICSVirtual/network/ICSNetwork`
-- Change the image of the `matlab` service by `sflorenz05/matlab_simulink:v0.2`
+- Open docker-compose file `cd ~/ICSVirtual/network/ICSNetwork`.
+- Change the image of the `matlab` service by `sflorenz05/matlab_simulink:v0.2`.
   
 #### Troubleshootings Matlab on Docker
 
-- [Matlab from docker-compose #39](https://github.com/mathworks-ref-arch/matlab-dockerfile/issues/39)
-- [Installing Simulink as a Docker Matlab add-on #40](https://github.com/mathworks-ref-arch/matlab-dockerfile/issues/40)
+- [Matlab from docker-compose #39](https://github.com/mathworks-ref-arch/matlab-dockerfile/issues/39).
+- [Installing Simulink as a Docker Matlab add-on #40](https://github.com/mathworks-ref-arch/matlab-dockerfile/issues/40).
 
 #### Import Project Files into the PATH before start simulation
 
@@ -124,14 +124,14 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
   
   ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink4.png)
 
-- All files has been compiled by default
-- E.g.: If we go inside the `ASU Unit` folder (see the PATH in the following image) we only need to compile the `*.c`, using the command `mex ASU_UNIT.c`. **Important:** `*.mexa64` files are generated.
+- All files has been compiled by default.
+  - E.g.: If we go inside the `ASU Unit` folder (see the PATH in the following image) we only need to compile the `*.c`, using the command `mex ASU_UNIT.c`. **Important:** `*.mexa64` files are generated.
   
   ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink5.png "Simulink 5")
 
 #### Run Simulink Project
 
-- Once all the code has been successfully compiled the Simulink Project is executed with double clic in the `*.slx`. E.g.: `Remedy_WWTP.slx`
+- Once all the code has been successfully compiled the Simulink Project is executed with double clic in the `*.slx`. E.g.: `Remedy_WWTP.slx`.
   
   ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink6.png)
 
@@ -142,35 +142,35 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 ### Getting started Scada-LTS
 
 - Once Scada-LTS container is running:
-  - Access to Scada-LTS GUI: [http://localhost:8080/Scada-LTS/](http://localhost:8080/Scada-LTS/)
-  - Login with `username`: admin `password`: admin
-  - Create empty script in "Scripting"
+  - Access to Scada-LTS GUI: [http://localhost:8080/Scada-LTS/](http://localhost:8080/Scada-LTS/).
+  - Login with `username`: admin `password`: admin.
+  - Create empty script in "Scripting".
   
   ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/scada1.png)
 
-  - Next go to the "SQL" tab  
-  - Paste content scripts-one-insert.txt file into the text field "SQL"
+  - Next go to the "SQL" tab.
+  - Paste content scripts-one-insert.txt file into the text field "SQL".
   
   - File `scripts-one-insert.txt` is placed into `~/ICSVirtual/scada-lts/scripts`.
   - Click "Submit update"
-  - If the operation is successful, the information about adding 12 records will be displayed
+  - If the operation is successful, the information about adding 12 records will be displayed.
   
-  ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/scada2.png)
+      ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/scada2.png)
   
-  - Then import the project (.json file)
+  - Then import the project (.json file).
     - E.g.: file `Water Heater 3 Stations.json` is placed into `~/ICSVirtual/scada-lts/sample/`
 
-  ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/scada3.png)
+      ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/scada3.png)
 
-  - Add a data source running on port 502 with host:openplc
-  - Make the connection with OpenPLC
+  - Add a data source running on port 502 with host:openplc.
+  - Make the connection with OpenPLC.
 
-    ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/scada4.png)
+      ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/scada4.png)
 
-  - Add the background image at "Graphical views"
-    - E.g.: file `background.png` is placed into `~/ICSVirtual/scada-lts/sample/`
+  - Add the background image at "Graphical views".
+    - E.g.: file `background.png` is placed into `~/ICSVirtual/scada-lts/sample/`.
   
-    ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/scada5.png)
+      ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/scada5.png)
 
 #### Troubleshootings Scada-LTS
 
@@ -186,27 +186,27 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 
 #### Create your own Attacker Docker image
 
-- Go to attacker folder `cd ~/ICSVirtual/attacker`
-- Compile `injection_attack.cpp` file `g++ injection_attack.cpp -o injection_attack -pthread`
-- Build image: `docker build -t attacker .`
+- Go to attacker folder `cd ~/ICSVirtual/attacker`.
+- Compile `injection_attack.cpp` file `g++ injection_attack.cpp -o injection_attack -pthread`.
+- Build image: `docker build -t attacker .`.
 
 #### Use the attacker image created for the project
 
-- Open docker-compose file `cd ~/ICSVirtual/network/attacker`
-- Change the image of the `matlab` service by `sflorenz05/attacker:v0.1`
+- Open docker-compose file `cd ~/ICSVirtual/network/attacker`.
+- Change the image of the `matlab` service by `sflorenz05/attacker:v0.1`.
 
 #### Deploying Attacker
 
 - Compile attacker code:
   - `cd ~/ICSVirtual/attacker`
   - `g++ injection_attack.cpp -o injection_attack -pthread`
-- Add permissions
+- Add permissions:
   - `cd ~/ICSVirtual/network/attacker`
   - `sudo chmod +x scripts/*.*`
 - Set enviromental variables:
   - Copy the `.env.example` and paste in the same path.
     - Rename `.env.example` to `.env`.
-  - Inspect the PLC container: `docker inspect <containerid>` to recover IP address of this container
+  - Inspect the PLC container: `docker inspect <containerid>` to recover IP address of this container.
     - Set the `IP_PLC` variable.
     - Set the `FREQ` variable.
 
