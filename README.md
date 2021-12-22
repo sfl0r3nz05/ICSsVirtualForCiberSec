@@ -266,4 +266,4 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 
 - `sudo apt-get install iputils-ping`
   
-- ping: `e.g.: ping 192.168.144.3`
+- e.g.: `ping 192.168.144.3`
