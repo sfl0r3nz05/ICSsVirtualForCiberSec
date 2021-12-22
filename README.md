@@ -13,7 +13,7 @@
       - [Use the matlab simulink image created for the project](#use-the-matlab-simulink-image-created-for-the-project)
       - [Troubleshootings Matlab on Docker](#troubleshootings-matlab-on-docker)
       - [Import Project Files into the PATH before start simulation](#import-project-files-into-the-path-before-start-simulation)
-      - [Compile all *.c using mex compiler of Matlab](#compile-all-c-using-mex-compiler-of-matlab)
+      - [Compile all `*.c` using mex compiler of Matlab](#compile-all-c-using-mex-compiler-of-matlab)
       - [Run Simulink Project](#run-simulink-project)
     - [Getting started Scada-LTS](#getting-started-scada-lts)
       - [Troubleshootings Scada-LTS](#troubleshootings-scada-lts)
@@ -118,7 +118,7 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 
 ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink3.png "Simulink 3")
 
-#### Compile all *.c using mex compiler of Matlab
+#### Compile all `*.c` using mex compiler of Matlab
 
 - The `*.c` version of all of the following folders must be compiled using mex:
   
