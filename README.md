@@ -40,6 +40,7 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 
 1. Install [docker for ubuntu](https://docs.docker.com/engine/install/ubuntu/).
 2. [Manage Docker as non-root user](https://docs.docker.com/engine/install/linux-postinstall/).
+   1. If it does not work try running `sudo chmod o+rw /var/run/docker.sock´ after adding a new user
 3. Install [docker-compose for ubuntu](https://docs.docker.com/compose/install/).
 4. Install make `sudo apt install make`.
 5. Install g++:
