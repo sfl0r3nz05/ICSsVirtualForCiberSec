@@ -23,10 +23,12 @@
       - [Use the attacker image created for the project](#use-the-attacker-image-created-for-the-project)
       - [Deploying Attacker](#deploying-attacker)
     - [Getting Started TCPDump](#getting-started-tcpdump)
+    - [Getting Started ModTester](#getting-started-tcpdump)
   - [How to use the project](#how-to-use-the-project)
     - [Deploy ICSNetwork](#deploy-icsnetwork)
     - [Deploy attacker](#deploy-attacker)
     - [Deploy tcpdump](#deploy-tcpdump)
+    - [Deploy ModTester](#deploy-modtester)
   - [How to test connection](#how-to-test-connection)
     - [Install/use ping network tool](#installuse-ping-network-tool)
 
@@ -222,6 +224,11 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 - Once `*.pcap` file is downloaded, it can be opened using Wireshark.
   
   ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/tcpdump2.png)
+  
+### Getting Started ModTester
+
+- Get ModTester from [Dangoro94/ModTester](https://github.com/Dangoro94/ModTester/).
+- Install Python for Ubuntu `sudo apt-get install python`.
 
 ## How to use the project
 
@@ -254,6 +261,15 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 - `make stop`
 
 - `make destroy`
+
+### Deploy ModTester
+
+- `sudo python modTester.py`
+
+- `show modules` / `use module_name`
+
+- `show options` / `set RHOSTS ip` / `exploit`
+
 
 ## How to test connection
 
