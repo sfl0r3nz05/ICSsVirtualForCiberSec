@@ -229,7 +229,8 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 
 - Get ModTester from [Dangoro94/ModTester](https://github.com/Dangoro94/ModTester/).
 - Install Python for Ubuntu `sudo apt-get install python`.
-
+  - Install extensions from `~/ICSVirtual/modtester/documentacion ModTester.pdf`.
+  - 
 ## How to use the project
 
 ### Deploy ICSNetwork
