@@ -227,10 +227,22 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
   
 ### Getting Started ModTester
 
-- Get ModTester from [Dangoro94/ModTester](https://github.com/Dangoro94/ModTester/).
-- Install Python for Ubuntu `sudo apt-get install python`.
-  - Install extensions from `~/ICSVirtual/modtester/documentacion ModTester.pdf`.
+#### Create your own ModTester Docker image
+
+- Go to modtester folder `cd ~/ICSVirtual/modtester`.
+- Build image: `docker build -t modtester .`.
    
+#### Use the modtester image created for the project
+
+- Open docker-compose file `cd ~/ICSVirtual/network/modtester`.
+- Change the image of the `matlab` service by `sflorenz05/modtester:v0.1`.   
+
+#### Deploying ModTester
+
+- Add permissions:
+  - `cd ~/ICSVirtual/network/modtester`
+  - `sudo chmod +x scripts/*.*`
+
 ## How to use the project
 
 ### Deploy ICSNetwork
@@ -265,12 +277,17 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 
 ### Deploy ModTester
 
-- `sudo python modTester.py`
+- `cd ~/ICSVirtual/network/modtester`
+
+- `make start`
 
 - `show modules` / `use module_name`
 
 - `show options` / `set RHOSTS ip` / `exploit`
 
+- `make stop`
+
+- `make destroy`
 
 ## How to test connection
 
