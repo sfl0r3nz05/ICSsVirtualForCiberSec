@@ -1,0 +1,15 @@
+version: '3'
+
+networks:
+  icsnetwork_ics:
+    external: true
+
+services:
+  modtester:
+    image: sflorenz05/modtester:v0.1
+    working_dir: /modtester
+    volumes:
+      - ../../modtester:/modtester
+    command: sudo python modTester.py
+    networks:
+      - icsnetwork_ics

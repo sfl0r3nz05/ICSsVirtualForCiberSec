@@ -1,0 +1,30 @@
+==============================
+[+] Looking for supported function codes on 192.168.127.82
+[+] Function Code 1(Read Coils) is supported.
+[+] Function Code 2(Read Discrete Inputs) is supported.
+[+] Function Code 3(Read Multiple Holding Registers) is supported.
+[+] Function Code 4(Read Input Registers) is supported.
+[+] Function Code 5(Write Single Coil) is supported.
+[+] Function Code 6(Write Single Holding Register) is supported.
+[+] Function Code 7(Read Exception Status) is supported.
+[+] Function Code 8(Diagnostic) is supported.
+[+] Function Code 11(Get Com Event Counter) is supported.
+[+] Function Code 12(Get Com Event Log) is supported.
+
+
+==============================
+[+] Looking for supported function codes on 192.168.127.82
+
+
+==============================
+[+] Looking for supported function codes on 192.168.127.82
+[+] Function Code 1(Read Coils) is supported.
+[+] Function Code 2(Read Discrete Inputs) is supported.
+[+] Function Code 3(Read Multiple Holding Registers) is supported.
+[+] Function Code 4(Read Input Registers) is supported.
+[+] Function Code 5(Write Single Coil) is supported.
+[+] Function Code 6(Write Single Holding Register) is supported.
+[+] Function Code 15(Write Multiple Coils) is supported.
+[+] Function Code 16(Write Multiple Holding Registers) is supported.
+
+
