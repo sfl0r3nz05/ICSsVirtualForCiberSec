@@ -23,11 +23,14 @@
       - [Use the attacker image created for the project](#use-the-attacker-image-created-for-the-project)
       - [Deploying Attacker](#deploying-attacker)
     - [Getting Started TCPDump](#getting-started-tcpdump)
-    - [Getting Started ModTester](#getting-started-tcpdump)
+    - [Getting Started ModTester](#getting-started-modtester)
+      - [Create your own ModTester Docker image](#create-your-own-modtester-docker-image)
+      - [Use the modtester image created for the project](#use-the-modtester-image-created-for-the-project)
+      - [Deploying ModTester](#deploying-modtester)
   - [How to use the project](#how-to-use-the-project)
     - [Deploy ICSNetwork](#deploy-icsnetwork)
-    - [Deploy attacker](#deploy-attacker)
     - [Deploy tcpdump](#deploy-tcpdump)
+    - [Deploy attacker](#deploy-attacker)
     - [Deploy ModTester](#deploy-modtester)
   - [How to test connection](#how-to-test-connection)
     - [Install/use ping network tool](#installuse-ping-network-tool)
@@ -231,11 +234,11 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 
 - Go to modtester folder `cd ~/ICSVirtual/modtester`.
 - Build image: `docker build -t modtester .`.
-   
+
 #### Use the modtester image created for the project
 
 - Open docker-compose file `cd ~/ICSVirtual/network/modtester`.
-- Change the image of the `matlab` service by `sflorenz05/modtester:v0.1`.   
+- Change the image of the `matlab` service by `sflorenz05/modtester:v0.2`.
 
 #### Deploying ModTester
 
@@ -255,9 +258,9 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 
 - `make destroy`
 
-### Deploy attacker
+### Deploy tcpdump
 
-- `cd ~/ICSVirtual/network/attacker`
+- `cd ~/ICSVirtual/network/tcpdump`
 
 - `make start`
 
@@ -265,9 +268,9 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 
 - `make destroy`
 
-### Deploy tcpdump
+### Deploy attacker
 
-- `cd ~/ICSVirtual/network/tcpdump`
+- `cd ~/ICSVirtual/network/attacker`
 
 - `make start`
 
@@ -281,9 +284,21 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 
 - `make start`
 
-- `show modules` / `use module_name`
+- `docker exec -it <modtester-container-id> bash`
+  - E.g.: `docker exec -it 91d48b6bdabd bash`
+  
+- Inside the container execute:
+  
+  - `python modTester.py`
+  
+  - `show modules` / `use module_name`
+    - E.g.: `use modbus/dos/floodingAttack`
 
-- `show options` / `set RHOSTS ip` / `exploit`
+  - `show options` to see options to complete.
+    - E.g.: `set RHOSTS ip`  -->  `set RHOSTS 172.18.0.2`
+    - E.g.: `set sIP ip`  -->  `set sIP 172.18.0.3`
+  
+  - `exploit`
 
 - `make stop`
 
