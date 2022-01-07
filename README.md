@@ -29,8 +29,8 @@
       - [Deploying ModTester](#deploying-modtester)
   - [How to use the project](#how-to-use-the-project)
     - [Deploy ICSNetwork](#deploy-icsnetwork)
-    - [Deploy attacker](#deploy-attacker)
     - [Deploy tcpdump](#deploy-tcpdump)
+    - [Deploy attacker](#deploy-attacker)
     - [Deploy ModTester](#deploy-modtester)
   - [How to test connection](#how-to-test-connection)
     - [Install/use ping network tool](#installuse-ping-network-tool)
@@ -258,9 +258,9 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 
 - `make destroy`
 
-### Deploy attacker
+### Deploy tcpdump
 
-- `cd ~/ICSVirtual/network/attacker`
+- `cd ~/ICSVirtual/network/tcpdump`
 
 - `make start`
 
@@ -268,9 +268,9 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 
 - `make destroy`
 
-### Deploy tcpdump
+### Deploy attacker
 
-- `cd ~/ICSVirtual/network/tcpdump`
+- `cd ~/ICSVirtual/network/attacker`
 
 - `make start`
 
