@@ -23,16 +23,18 @@
       - [Use the attacker image created for the project](#use-the-attacker-image-created-for-the-project)
       - [Deploying Attacker](#deploying-attacker)
     - [Getting Started TCPDump](#getting-started-tcpdump)
+    - [Getting Started ModTester](#getting-started-tcpdump)
   - [How to use the project](#how-to-use-the-project)
     - [Deploy ICSNetwork](#deploy-icsnetwork)
     - [Deploy attacker](#deploy-attacker)
     - [Deploy tcpdump](#deploy-tcpdump)
+    - [Deploy ModTester](#deploy-modtester)
   - [How to test connection](#how-to-test-connection)
     - [Install/use ping network tool](#installuse-ping-network-tool)
 
 ## Description
 
-This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree project and aims to perform security tests on a water treatment plant. For this purpose, the project integrates 3 basic elements: [OpenPLC](https://github.com/thiagoralves/OpenPLC_v3), [Scada-LTS](https://github.com/SCADA-LTS/Scada-LTS) and [Matlab on Docker](https://github.com/mathworks-ref-arch/matlab-dockerfile).
+This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree project and [@ndevillalon](https://github.com/ndevillalon) internship and aims to perform security tests on a water treatment plant. For this purpose, the project integrates 3 basic elements: [OpenPLC](https://github.com/thiagoralves/OpenPLC_v3), [Scada-LTS](https://github.com/SCADA-LTS/Scada-LTS) and [Matlab on Docker](https://github.com/mathworks-ref-arch/matlab-dockerfile).
 
 **Project Status:** `in progress`
 
@@ -40,6 +42,7 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 
 1. Install [docker for ubuntu](https://docs.docker.com/engine/install/ubuntu/).
 2. [Manage Docker as non-root user](https://docs.docker.com/engine/install/linux-postinstall/).
+   1. If it does not work try running `sudo chmod o+rw /var/run/docker.sock` after adding a new user
 3. Install [docker-compose for ubuntu](https://docs.docker.com/compose/install/).
 4. Install make `sudo apt install make`.
 5. Install g++:
@@ -221,6 +224,24 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 - Once `*.pcap` file is downloaded, it can be opened using Wireshark.
   
   ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/tcpdump2.png)
+  
+### Getting Started ModTester
+
+#### Create your own ModTester Docker image
+
+- Go to modtester folder `cd ~/ICSVirtual/modtester`.
+- Build image: `docker build -t modtester .`.
+   
+#### Use the modtester image created for the project
+
+- Open docker-compose file `cd ~/ICSVirtual/network/modtester`.
+- Change the image of the `matlab` service by `sflorenz05/modtester:v0.1`.   
+
+#### Deploying ModTester
+
+- Add permissions:
+  - `cd ~/ICSVirtual/network/modtester`
+  - `sudo chmod +x scripts/*.*`
 
 ## How to use the project
 
@@ -249,6 +270,20 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 - `cd ~/ICSVirtual/network/tcpdump`
 
 - `make start`
+
+- `make stop`
+
+- `make destroy`
+
+### Deploy ModTester
+
+- `cd ~/ICSVirtual/network/modtester`
+
+- `make start`
+
+- `show modules` / `use module_name`
+
+- `show options` / `set RHOSTS ip` / `exploit`
 
 - `make stop`
 

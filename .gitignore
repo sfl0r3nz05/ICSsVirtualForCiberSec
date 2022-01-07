@@ -2,3 +2,4 @@
 tcpdump/*.pcap
 databases/
 attacker/injection_attack
+*.pyc
