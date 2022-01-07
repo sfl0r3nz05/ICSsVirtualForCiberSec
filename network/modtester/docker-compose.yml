@@ -6,10 +6,10 @@ networks:
 
 services:
   modtester:
-    image: sflorenz05/modtester:v0.1
+    image: sflorenz05/modtester:v0.2
     working_dir: /modtester
     volumes:
       - ../../modtester:/modtester
-    command: sudo python modTester.py
+    command: tail -F anything
     networks:
       - icsnetwork_ics
