@@ -177,6 +177,9 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
     - E.g.: file `background.png` is placed into `~/ICSVirtual/scada-lts/sample/`
 
         ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/scada5.png)
+  - Change the name of the file named .env.example in /ICSVirtual/network/ICSNetwork :
+    `cd ~/ICSVirtual/network/ICSNetwork`
+    `mv .env.example .env`
 
 #### Troubleshootings Scada-LTS
 
