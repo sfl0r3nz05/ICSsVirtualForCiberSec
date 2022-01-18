@@ -56,6 +56,10 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 
 ### Getting Started OpenPLC
 
+<details>
+
+<summary>Open to see details</summary>
+
 #### Create your own OpenPLC image  
 
 - Build openplc image:
@@ -81,6 +85,8 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 - Start PLC.
 
 ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/openplc2.png "OpenPLC 2")
+
+</details>
 
 ### Getting Started Matlab
 
