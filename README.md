@@ -86,6 +86,10 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 
 #### Create your own Matlab Simulink Docker image
 
+<details>
+
+<summary>Click to show</summary>
+
 - Run the MATLAB container using this command:
       `docker run -it -p 5901:5901 -p 6080:6080 --shm-size=512M mathworks/matlab:r20XYz -vnc`
 
@@ -109,6 +113,8 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
     - `docker ps`
     - `docker commit <containerID> <repository>:<tag>`
       - E.g.: `docker commit 3d555451f07a mymatlab:r2020a`.
+  
+</details>
 
 #### Use the matlab simulink image created for the project
 
