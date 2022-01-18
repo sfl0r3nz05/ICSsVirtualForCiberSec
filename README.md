@@ -84,11 +84,11 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 
 ### Getting Started Matlab
 
-#### Create your own Matlab Simulink Docker image
-
 <details>
 
-<summary>Click to show</summary>
+<summary>Open to see details</summary>
+
+#### Create your own Matlab Simulink Docker image
 
 - Run the MATLAB container using this command:
       `docker run -it -p 5901:5901 -p 6080:6080 --shm-size=512M mathworks/matlab:r20XYz -vnc`
@@ -113,8 +113,6 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
     - `docker ps`
     - `docker commit <containerID> <repository>:<tag>`
       - E.g.: `docker commit 3d555451f07a mymatlab:r2020a`.
-  
-</details>
 
 #### Use the matlab simulink image created for the project
 
@@ -151,7 +149,13 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
   
   ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink7.png)
 
+</details>
+
 ### Getting started Scada-LTS
+
+<details>
+
+<summary>Open to see details</summary>
 
 - Once Scada-LTS container is running:
   - Access to Scada-LTS GUI: [http://localhost:8080/Scada-LTS/](http://localhost:8080/Scada-LTS/).
@@ -187,6 +191,8 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 #### Troubleshootings Scada-LTS
 
 - [Graphical views Scada-LTS #1961](https://github.com/SCADA-LTS/Scada-LTS/issues/1961)
+
+</details>
 
 ### Getting Started network ICSNetwork
 
