@@ -202,11 +202,21 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 
 ### Getting Started network ICSNetwork
 
+<details>
+
+<summary>Open to see details</summary>
+
 - Add permissions
   - `cd ~/ICSVirtual/network/ICSNetwork`
   - `sudo chmod +x scripts/*.*`
 
+</details>
+
 ### Getting Started Attacker
+
+<details>
+
+<summary>Open to see details</summary>
 
 #### Create your own Attacker Docker image
 
@@ -234,7 +244,13 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
     - Set the `IP_PLC` variable.
     - Set the `FREQ` variable.
 
+</details>
+
 ### Getting Started TCPDump
+
+<details>
+
+<summary>Open to see details</summary>
 
 - To capture the traffic into the ICSNetwork the [TCPDump](https://www.tcpdump.org/) tool is used.
 - To deploy as part of the Docker Infrastructure `kaazing/tcpdump` image is [used](https://hub.docker.com/r/kaazing/tcpdump).
@@ -246,7 +262,13 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
   
   ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/tcpdump2.png)
   
+</details>
+
 ### Getting Started ModTester
+
+<details>
+
+<summary>Open to see details</summary>
 
 #### Create your own ModTester Docker image
 
@@ -263,6 +285,8 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 - Add permissions:
   - `cd ~/ICSVirtual/network/modtester`
   - `sudo chmod +x scripts/*.*`
+
+</details>
 
 ## How to use the project
 
