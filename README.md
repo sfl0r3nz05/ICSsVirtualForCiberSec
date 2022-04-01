@@ -224,7 +224,7 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 
 <summary>Open to see details</summary>
 
-Attacker is divided into: *Single Attacker* and *Modtester* tool.
+- **Attacker** is divided into: *Single Attacker* and *Modtester* tool.
 
 #### Single Attacker
 
