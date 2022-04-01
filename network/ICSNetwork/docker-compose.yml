@@ -55,6 +55,6 @@ services:
       PASSWORD: "ILoveMATLAB"
     command: -vnc
     volumes:
-      - ../../matlab/simulink:/home/matlab/Documents/MATLAB/simulink
+      - ../../simulink:/home/matlab/Documents/MATLAB/simulink
     networks:
       - ics
