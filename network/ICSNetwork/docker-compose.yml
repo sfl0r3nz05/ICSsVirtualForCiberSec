@@ -6,38 +6,38 @@ networks:
 
 services:
 
-  database:
-    container_name: mysql
-    image: mysql/mysql-server:5.7
-    ports:
-      - "3306:3306"
-    environment:
-      MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
-      MYSQL_USER: "${MYSQL_USER}"
-      MYSQL_PASSWORD: "${MYSQL_PASSWORD}"
-      MYSQL_DATABASE: "${MYSQL_DATABASE}"
-    expose: [ "3306" ]
-    volumes:
-      - ../../mysql/databases:/var/lib/mysql
-    networks:
-      - ics
-
-  scadalts:
-    image: scadalts/scadalts:latest
-    ports:
-      - "8080:8080"
-    depends_on:
-      - database
-    expose: [ "8080", "8000" ]
-    links:
-      - database:database
-    networks:
-      - ics
-
+  #  database:
+  #    container_name: mysql
+  #    image: mysql/mysql-server:5.7
+  #    ports:
+  #      - "3306:3306"
+  #    environment:
+  #      MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
+  #      MYSQL_USER: "${MYSQL_USER}"
+  #      MYSQL_PASSWORD: "${MYSQL_PASSWORD}"
+  #      MYSQL_DATABASE: "${MYSQL_DATABASE}"
+  #    expose: [ "3306" ]
+  #    volumes:
+  #      - ../../mysql/databases:/var/lib/mysql
+  #    networks:
+  #      - ics
+  #
+  #  scadalts:
+  #    image: scadalts/scadalts:latest
+  #    ports:
+  #      - "8080:8080"
+  #    depends_on:
+  #      - database
+  #    expose: [ "8080", "8000" ]
+  #    links:
+  #      - database:database
+  #    networks:
+  #      - ics
+  #
   openplc:
     image: sflorenz05/open-plc:v0.1
-    depends_on:
-      - scadalts
+    #depends_on:
+    #  - scadalts
     ports:
       - "502:502"
       - "8081:8080"
@@ -46,7 +46,7 @@ services:
       - ics
 
   matlab:
-    image: sflorenz05/matlab_simulink:v0.2
+    image: sflorenz05/matlab_simulink:v0.3
     shm_size: 512M
     ports:
       - "5901:5901"

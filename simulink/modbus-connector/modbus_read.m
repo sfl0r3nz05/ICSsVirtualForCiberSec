@@ -1,12 +1,5 @@
 function modbus_read(block)
-%modbus_client is  a MATLAB S-Function
-%    
-%This function will be used to read Modbus Messages from the IP/port/resigtry given in input
-%
-% The setup method is used to setup the basic attributes of the
-% S-function such as ports, parameters, etc. Do not add any other
-% calls to the main body of the function.  
-%   
+
 setup(block);
   
 %endfunction

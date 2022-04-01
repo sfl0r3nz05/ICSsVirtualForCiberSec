@@ -79,14 +79,14 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
   
 - Disable DNP3/EtherNET/IP to use only Modbus protocol:
 
-![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/openplc1.png "OpenPLC 1")
+![alt text](./images/openplc1.png "OpenPLC 1")
 
 - Load the `*.st` file of the project.
   - E.g.: file `water_heater.st` is placed into `~/ICSVirtual/openplc/sample/`.
   
 - Start PLC.
 
-![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/openplc2.png "OpenPLC 2")
+![alt text](./images/openplc2.png "OpenPLC 2")
 
 </details>
 
@@ -101,21 +101,27 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 - Run the MATLAB container using this command:
       `docker run -it -p 5901:5901 -p 6080:6080 --shm-size=512M mathworks/matlab:r20XYz -vnc`
 
-  - :r20XYz chooses the release version of the MATLAB container.
+  - :r20XYz chooses the release version of the MATLAB container. E.g.: `r2022a`
   
   - Open a bash for the Matlab container: e.g.: `docker exec -it <containerID> bash`.
   
   - Run Matlab with `root` permissions: `sudo matlab`.
 
+  - Install *Industrial Control Communication Toolbox* as add-on:
+
+      ![alt text](./images/ics_toolbox.png "ics1")
+
   - Install Matlab Simulink as add-on:
 
-      ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink1.png "Simulink 1")
+      ![alt text](./images/simulink1.png "Simulink 1")
 
-      ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink2.png "Simulink 1")
+      ![alt text](./images/simulink2.png "Simulink 1")
 
   - Install gcc, g++, foltran:
     - `sudo apt-get update`
     - `sudo apt-get install -y gcc g++ gfortran`
+        
+      ![alt text](./images/install_gcc.png "Install gcc 1")
   
   - [Save changes in container](https://www.mathworks.com/help/cloudcenter/ug/save-changes-in-containers.html)
     - `docker ps`
@@ -125,7 +131,7 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 #### Use the matlab simulink image created for the project
 
 - Open docker-compose file `cd ~/ICSVirtual/network/ICSNetwork`.
-- Change the image of the `matlab` service by `sflorenz05/matlab_simulink:v0.2`.
+- Change the image of the `matlab` service by `sflorenz05/matlab_simulink:v0.3`.
   
 #### Troubleshootings Matlab on Docker
 
@@ -134,28 +140,28 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 
 #### Import Project Files into the PATH before start simulation
 
-![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink3.png "Simulink 3")
+![alt text](./images/simulink3.png "Simulink 3")
 
 #### Compile all `*.c` using mex compiler of Matlab
 
 - The `*.c` version of all of the following folders must be compiled using mex:
   
-  ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink4.png)
+  ![alt text](./images/simulink4.png)
 
 - All files has been compiled by default.
   - E.g.: If we go inside the `ASU Unit` folder (see the PATH in the following image) we only need to compile the `*.c`, using the command `mex ASU_UNIT.c`. **Important:** `*.mexa64` files are generated.
   
-  ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink5.png "Simulink 5")
+  ![alt text](./images/simulink5.png "Simulink 5")
 
 #### Run Simulink Project
 
 - Once all the code has been successfully compiled the Simulink Project is executed with double clic in the `*.slx`. E.g.: `Remedy_WWTP.slx`.
   
-  ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink6.png)
+  ![alt text](./images/simulink6.png)
 
 - The values displayed on the displays should be close to the values highlighted in the following figure.
   
-  ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/simulink7.png)
+  ![alt text](./images/simulink7.png)
 
 </details>
 
@@ -170,7 +176,7 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
   - Login with `username`: admin `password`: admin.
   - Create empty script in "Scripting".
 
-      ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/scada1.png)
+      ![alt text](./images/scada1.png)
 
   - Next go to the "SQL" tab.
   - Paste content scripts-one-insert.txt file into the text field "SQL".
@@ -179,22 +185,22 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
   - Click "Submit update"
   - If the operation is successful, the information about adding 12 records will be displayed.
 
-      ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/scada2.png)
+      ![alt text](./images/scada2.png)
   
   - Then import the project (.json file).
     - E.g.: file `Water Heater 3 Stations.json` is placed into `~/ICSVirtual/scada-lts/sample/`
 
-        ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/scada3.png)
+        ![alt text](./images/scada3.png)
 
   - Add a data source running on port 502 with host:openplc.
   - Make the connection with OpenPLC.
 
-      ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/scada4.png)
+      ![alt text](./images/scada4.png)
 
   - Add the background image at "Graphical views".
     - E.g.: file `background.png` is placed into `~/ICSVirtual/scada-lts/sample/`
 
-        ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/scada5.png)
+        ![alt text](./images/scada5.png)
   - Change the name of the file named .env.example in /ICSVirtual/network/ICSNetwork :
   
     `cd ~/ICSVirtual/network/ICSNetwork`
@@ -285,11 +291,11 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 - To deploy as part of the Docker Infrastructure `kaazing/tcpdump` image is [used](https://hub.docker.com/r/kaazing/tcpdump).
 - Once the `tcpdump` container is deployed an `*.pcap` file is included as part of the `tcpdump` folder.
 
-  ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/tcpdump1.png)
+  ![alt text](./images/tcpdump1.png)
 
 - Once `*.pcap` file is downloaded, it can be opened using Wireshark.
   
-  ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/tcpdump2.png)
+  ![alt text](./images/tcpdump2.png)
   
 </details>
 
