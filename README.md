@@ -19,14 +19,15 @@
       - [Troubleshootings Scada-LTS](#troubleshootings-scada-lts)
     - [Getting Started network ICSNetwork](#getting-started-network-icsnetwork)
     - [Getting Started Attacker](#getting-started-attacker)
-      - [Create your own Attacker Docker image](#create-your-own-attacker-docker-image)
-      - [Use the attacker image created for the project](#use-the-attacker-image-created-for-the-project)
-      - [Deploying Attacker](#deploying-attacker)
+      - [Single Attacker](#single-attacker)
+        - [Create your own Attacker Docker image](#create-your-own-attacker-docker-image)
+        - [Use the attacker image created for the project](#use-the-attacker-image-created-for-the-project)
+        - [Deploying Attacker](#deploying-attacker)
+      - [ModTester](#modtester)
+        - [Create your own ModTester Docker image](#create-your-own-modtester-docker-image)
+        - [Use the modtester image created for the project](#use-the-modtester-image-created-for-the-project)
+        - [Deploying ModTester](#deploying-modtester)
     - [Getting Started TCPDump](#getting-started-tcpdump)
-    - [Getting Started ModTester](#getting-started-modtester)
-      - [Create your own ModTester Docker image](#create-your-own-modtester-docker-image)
-      - [Use the modtester image created for the project](#use-the-modtester-image-created-for-the-project)
-      - [Deploying ModTester](#deploying-modtester)
   - [How to use the project](#how-to-use-the-project)
     - [Deploy ICSNetwork](#deploy-icsnetwork)
     - [Deploy tcpdump](#deploy-tcpdump)
@@ -223,18 +224,22 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 
 <summary>Open to see details</summary>
 
-#### Create your own Attacker Docker image
+Attacker is divided into: *Single Attacker* and *Modtester* tool.
+
+#### Single Attacker
+
+##### Create your own Attacker Docker image
 
 - Go to attacker folder `cd ~/ICSVirtual/attacker`.
 - Compile `injection_attack.cpp` file `g++ injection_attack.cpp -o injection_attack -pthread`.
 - Build image: `docker build -t attacker .`.
 
-#### Use the attacker image created for the project
+##### Use the attacker image created for the project
 
 - Open docker-compose file `cd ~/ICSVirtual/network/attacker`.
 - Change the image of the `matlab` service by `sflorenz05/attacker:v0.1`.
 
-#### Deploying Attacker
+##### Deploying Attacker
 
 - Compile attacker code:
   - `cd ~/ICSVirtual/attacker`
@@ -248,6 +253,24 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
   - Inspect the PLC container: `docker inspect <containerid>` to recover IP address of this container.
     - Set the `IP_PLC` variable.
     - Set the `FREQ` variable.
+
+#### ModTester
+
+##### Create your own ModTester Docker image
+
+- Go to modtester folder `cd ~/ICSVirtual/modtester`.
+- Build image: `docker build -t modtester .`.
+
+##### Use the modtester image created for the project
+
+- Open docker-compose file `cd ~/ICSVirtual/network/modtester`.
+- Change the image of the `matlab` service by `sflorenz05/modtester:v0.2`.
+
+##### Deploying ModTester
+
+- Add permissions:
+  - `cd ~/ICSVirtual/network/modtester`
+  - `sudo chmod +x scripts/*.*`
 
 </details>
 
@@ -267,30 +290,6 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
   
   ![alt text](https://github.com/sfl0r3nz05/ICSVirtual/blob/main/images/tcpdump2.png)
   
-</details>
-
-### Getting Started ModTester
-
-<details>
-
-<summary>Open to see details</summary>
-
-#### Create your own ModTester Docker image
-
-- Go to modtester folder `cd ~/ICSVirtual/modtester`.
-- Build image: `docker build -t modtester .`.
-
-#### Use the modtester image created for the project
-
-- Open docker-compose file `cd ~/ICSVirtual/network/modtester`.
-- Change the image of the `matlab` service by `sflorenz05/modtester:v0.2`.
-
-#### Deploying ModTester
-
-- Add permissions:
-  - `cd ~/ICSVirtual/network/modtester`
-  - `sudo chmod +x scripts/*.*`
-
 </details>
 
 ## How to use the project

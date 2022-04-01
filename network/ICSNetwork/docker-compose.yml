@@ -58,15 +58,3 @@ services:
       - ../../matlab/simulink:/home/matlab/Documents/MATLAB/simulink
     networks:
       - ics
-
-  modbus-server:
-    container_name: modbus-server
-    image: oitc/modbus-server
-    restart: always
-    command: -f /modbus_server.json
-    ports:
-      - 5020:5020
-    volumes:
-      - ../../modbus-server/modbus_server.json:/modbus_server.json:ro
-    networks:
-      - ics
