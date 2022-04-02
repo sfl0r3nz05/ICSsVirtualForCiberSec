@@ -11,7 +11,9 @@ function Update(block)
 ModBusTCP = get_param(block.BlockHandle, 'UserData');
 registry = block.DialogPrm(1).Data;
 value = single(block.InputPort(1).Data);
-writeModBus(ModBusTCP, registry, value);
+%target = block.DialogPrm(4).Data;
+target = 'holdingregs'
+writeModBus(ModBusTCP, target, registry, value);
 
 function setup(block)
   block.NumInputPorts  = 1;
@@ -69,5 +71,5 @@ function ModBusTCP = openConnection(ipaddress, port)
   ModBusTCP=modbus('tcpip', ipaddress, port);
   ModBusTCP.ByteOrder='big-endian';
 
-function writeModBus(ModBusTCP, registry, value)
-  write(ModBusTCP, 'holdingregs', registry, double(value))
+function writeModBus(ModBusTCP, target, registry, value)
+  write(ModBusTCP, target, registry, double(value))
