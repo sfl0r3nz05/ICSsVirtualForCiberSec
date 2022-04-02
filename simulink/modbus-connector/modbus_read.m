@@ -72,7 +72,7 @@ function ModBusTCP = openConnection(ipaddress, port)
     
 function message = prepareReadingMessage(registry)
     stationId = 1; %the station id on the slave we are referring to
-    transID=uint16(0);
+    transID= uint16(0);
     FunCod =  int16(3);
     ProtID = int16(0);
     Lenght = int16(6);
@@ -81,11 +81,8 @@ function message = prepareReadingMessage(registry)
     UnitIDFunCod = bitor(FunCod,UnitID);
     Address_offset = int16(registry);
     reg_number = int16(2);
-    message = [transID; ProtID; Lenght; UnitIDFunCod; Address_offset;reg_number];
+    message = [transID; ProtID; Lenght; UnitIDFunCod; Address_offset; reg_number];
    
 function response = readFloating(ModBusTCP, message)
-    disp(message)
-
- 
-    
+  response = read(ModBusTCP, 'holdingregs', 1234)
     

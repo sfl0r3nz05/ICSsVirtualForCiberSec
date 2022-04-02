@@ -1,21 +1,31 @@
 PROGRAM My_Program
   VAR
     CaudalPurga AT %MD0 : DINT := 95145;
-    Nitrato AT %IW0 : INT := 130;
-    Amonio AT %IW1 : INT := 685;
-    OxigenoDisuelto AT %IW2 : INT := 254;
-    SolidoSuspendido AT %MD1 : REAL := 3138.87;
-    Aireacion AT %IW3 : INT := 3;
-    Temperatura AT %IW4 : INT := 15;
-    CaudalAire AT %QW0 : INT;
+    PINitrato AT %MW201 : INT := 100;
+    PINitratoR AT %MW202 : INT := 130;
+    SCNitrato AT %MW203 : INT := 125;
+    SCNitratoR AT %MW204 : INT := 120;
+    Amonio AT %MW205 : INT := 685;
+    OxigenoDisuelto AT %MW206 : INT := 254;
+    Aireacion AT %MW208 : INT := 3;
+    Temperatura AT %MW209 : INT := 15;
+    CaudalAire AT %MW210 : INT;
     CaudalRecircInt AT %QW1 : INT;
   END_VAR
   VAR
     Input : BOOL;
     Output : BOOL;
+    MOVE5_OUT : INT;
+    MOVE3_OUT : INT;
+    MOVE1_OUT : INT;
   END_VAR
 
-  Output := Input;
+  MOVE5_OUT := MOVE(PINitrato);
+  PINitratoR := MOVE5_OUT;
+  MOVE3_OUT := MOVE(SCNitratoR);
+  PINitrato := MOVE3_OUT;
+  MOVE1_OUT := MOVE(SCNitrato);
+  SCNitratoR := MOVE1_OUT;
 END_PROGRAM
 
 
