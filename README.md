@@ -11,6 +11,7 @@
     - [Getting Started Matlab](#getting-started-matlab)
       - [Create your own Matlab Simulink Docker image](#create-your-own-matlab-simulink-docker-image)
       - [Use the matlab simulink image created for the project](#use-the-matlab-simulink-image-created-for-the-project)
+      - [Reference to the Modbus Module used](#reference-to-the-modbus-module-used)
       - [Troubleshootings Matlab on Docker](#troubleshootings-matlab-on-docker)
       - [Import Project Files into the PATH before start simulation](#import-project-files-into-the-path-before-start-simulation)
       - [Compile all `*.c` using mex compiler of Matlab](#compile-all-c-using-mex-compiler-of-matlab)
@@ -132,7 +133,14 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 
 - Open docker-compose file `cd ~/ICSVirtual/network/ICSNetwork`.
 - Change the image of the `matlab` service by `sflorenz05/matlab_simulink:v0.3`.
-  
+
+#### Reference to the Modbus Module used
+
+- [Creating Modbus Object](https://es.mathworks.com/help/icomm/ug/modbus.html).
+- [Read Modbus Module](https://es.mathworks.com/help/icomm/ug/modbus.read.html).
+- [Write Modbus Module](https://es.mathworks.com/help/icomm/ug/modbus.write.html).
+
+
 #### Troubleshootings Matlab on Docker
 
 - [Matlab from docker-compose #39](https://github.com/mathworks-ref-arch/matlab-dockerfile/issues/39).
