@@ -1,5 +1,18 @@
 function modbus_read(block)
 setup(block);
+function Start(block)
+address = block.DialogPrm(2).Data;
+port = block.DialogPrm(3).Data;
+ModBusTCP = openConnection(address, port);
+set_param(block.BlockHandle, 'UserData', ModBusTCP);
+function Outputs(block)
+block.OutputPort(1).Data = block.Dwork(1).Data;
+function Update(block)
+ModBusTCP = get_param(block.BlockHandle, 'UserData');
+registry = block.DialogPrm(1).Data;
+message = prepareReadingMessage(registry);
+response = readFloating(ModBusTCP, message);
+block.Dwork(1).Data = double(response);
 
 function setup(block)
   block.NumInputPorts  = 0;
@@ -49,22 +62,6 @@ function DoPostPropSetup(block)
   block.Dwork(1).Complexity      = 'Real'; % real
   block.Dwork(1).UsedAsDiscState = true;
   block.AutoRegRuntimePrms;
-
-function Start(block)
-address = block.DialogPrm(2).Data;
-port = block.DialogPrm(3).Data;
-ModBusTCP = openConnection(address, port);
-set_param(block.BlockHandle, 'UserData', ModBusTCP);
-
-function Outputs(block)
-block.OutputPort(1).Data = block.Dwork(1).Data;
-
-function Update(block)
-ModBusTCP = get_param(block.BlockHandle, 'UserData');
-registry = block.DialogPrm(1).Data;
-message = prepareReadingMessage(registry);
-response = readFloating(ModBusTCP, message);
-block.Dwork(1).Data = double(response);
 
 function ModBusTCP = openConnection(ipaddress, port)
     ModBusTCP=modbus('tcpip', ipaddress, port);

@@ -1,5 +1,17 @@
 function modbus_write(block) 
 setup(block);
+function Start(block)
+address = block.DialogPrm(2).Data;
+port = block.DialogPrm(3).Data;
+ModBusTCP = openConnection(address, port);
+set_param(block.BlockHandle, 'UserData', ModBusTCP);
+function Outputs(block)
+block.OutputPort(1).Data = block.Dwork(1).Data;
+function Update(block)
+ModBusTCP = get_param(block.BlockHandle, 'UserData');
+registry = block.DialogPrm(1).Data;
+value = single(block.InputPort(1).Data);
+writeModBus(ModBusTCP, registry, value);
 
 function setup(block)
   block.NumInputPorts  = 1;
@@ -53,24 +65,9 @@ function DoPostPropSetup(block)
   block.Dwork(1).UsedAsDiscState = true;
   block.AutoRegRuntimePrms;
 
-function Start(block)
-address = block.DialogPrm(2).Data;
-port = block.DialogPrm(3).Data;
-ModBusTCP = openConnection(address, port);
-set_param(block.BlockHandle, 'UserData', ModBusTCP);
-
-function Outputs(block)
-block.OutputPort(1).Data = block.Dwork(1).Data;
-
-function Update(block)
-ModBusTCP = get_param(block.BlockHandle, 'UserData');
-registry = block.DialogPrm(1).Data;
-value = single(block.InputPort(1).Data);
-writeModBus(ModBusTCP, registry, value);
-
 function ModBusTCP = openConnection(ipaddress, port)
-    ModBusTCP=modbus('tcpip', ipaddress, port);
-    ModBusTCP.ByteOrder='big-endian';
+  ModBusTCP=modbus('tcpip', ipaddress, port);
+  ModBusTCP.ByteOrder='big-endian';
 
 function writeModBus(ModBusTCP, registry, value)
-    write(ModBusTCP, 'holdingregs', registry, double(value))
+  write(ModBusTCP, 'holdingregs', registry, double(value))
