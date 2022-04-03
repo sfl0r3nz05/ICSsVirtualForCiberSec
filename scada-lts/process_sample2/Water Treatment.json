@@ -1,0 +1,154 @@
+{
+   "graphicalViews": [
+      {
+         "user": "admin",
+         "anonymousAccess": "NONE",
+         "viewComponents": [
+            {
+               "type": "SCRIPT",
+               "dataPointXid": "DP_932785",
+               "bkgdColorOverride": "",
+               "displayControls": true,
+               "nameOverride": "",
+               "script": "return(\"<p style='font-size:25px'>\" + parseFloat(this.value).toFixed(0) + \"<\/p>\") ",
+               "settableOverride": true,
+               "x": 335,
+               "y": 65
+            },
+            {
+               "type": "SCRIPT",
+               "dataPointXid": "DP_962785",
+               "bkgdColorOverride": "",
+               "displayControls": true,
+               "nameOverride": "",
+               "script": "return(\"<p style='font-size:25px'>\" + parseFloat(this.value).toFixed(2) + \"<\/p>\") ",
+               "settableOverride": true,
+               "x": 215,
+               "y": 115
+            },
+            {
+               "type": "HTML",
+               "content": "<p style='font-size:25px'>Amonio: <\/p>",
+               "x": 250,
+               "y": 65
+            },
+            {
+               "type": "HTML",
+               "content": "<p style='font-size:25px'>Aireacion: <\/p>",
+               "x": 175,
+               "y": 115
+            }
+         ],
+         "sharingUsers": [],
+         "name": "OpenPLC",
+         "xid": "GV_253706"
+      }
+   ],
+   "dataSources": [
+      {
+         "xid": "DS_347649",
+         "type": "MODBUS_IP",
+         "alarmLevels": {
+            "DATA_SOURCE_EXCEPTION": "URGENT",
+            "POINT_READ_EXCEPTION": "URGENT",
+            "POINT_WRITE_EXCEPTION": "URGENT"
+         },
+         "updatePeriodType": "MILLISECONDS",
+         "transportType": "TCP_KEEP_ALIVE",
+         "contiguousBatches": false,
+         "createSlaveMonitorPoints": false,
+         "enabled": true,
+         "encapsulated": false,
+         "host": "172.18.0.5",
+         "maxReadBitCount": 2000,
+         "maxReadRegisterCount": 250,
+         "maxWriteRegisterCount": 250,
+         "name": "OpenPLC",
+         "port": 502,
+         "quantize": false,
+         "retries": 2,
+         "timeout": 500,
+         "updatePeriods": 500
+      }
+   ],
+   "dataPoints": [
+      {
+         "xid": "DP_932785",
+         "loggingType": "ON_CHANGE",
+         "intervalLoggingPeriodType": "MINUTES",
+         "intervalLoggingType": "INSTANT",
+         "purgeType": "YEARS",
+         "pointLocator": {
+            "range": "HOLDING_REGISTER",
+            "modbusDataType": "FOUR_BYTE_FLOAT",
+            "additive": 0.0,
+            "bit": 0,
+            "charset": "ASCII",
+            "multiplier": 1.0,
+            "offset": 1230,
+            "registerCount": 0,
+            "settableOverride": true,
+            "slaveId": 3,
+            "slaveMonitor": false
+         },
+         "eventDetectors": [],
+         "engineeringUnits": "",
+         "chartColour": null,
+         "chartRenderer": null,
+         "dataSourceXid": "DS_347649",
+         "defaultCacheSize": 1,
+         "deviceName": "OpenPLC",
+         "discardExtremeValues": false,
+         "discardHighLimit": 1.7976931348623157E308,
+         "discardLowLimit": -1.7976931348623157E308,
+         "enabled": true,
+         "intervalLoggingPeriod": 15,
+         "name": "Amonio",
+         "purgePeriod": 1,
+         "textRenderer": {
+            "type": "PLAIN",
+            "suffix": ""
+         },
+         "tolerance": 0.0
+      },
+      {
+         "xid": "DP_962785",
+         "loggingType": "ON_CHANGE",
+         "intervalLoggingPeriodType": "MINUTES",
+         "intervalLoggingType": "INSTANT",
+         "purgeType": "YEARS",
+         "pointLocator": {
+            "range": "HOLDING_REGISTER",
+            "modbusDataType": "TWO_BYTE_INT_SIGNED",
+            "additive": 0.0,
+            "bit": 0,
+            "charset": "ASCII",
+            "multiplier": 1.0,
+            "offset": 1234,
+            "registerCount": 0,
+            "settableOverride": true,
+            "slaveId": 6,
+            "slaveMonitor": false
+         },
+         "eventDetectors": [],
+         "engineeringUnits": "",
+         "chartColour": null,
+         "chartRenderer": null,
+         "dataSourceXid": "DS_347649",
+         "defaultCacheSize": 1,
+         "deviceName": "OpenPLC",
+         "discardExtremeValues": false,
+         "discardHighLimit": 1.7976931348623157E308,
+         "discardLowLimit": -1.7976931348623157E308,
+         "enabled": true,
+         "intervalLoggingPeriod": 15,
+         "name": "Aireacion",
+         "purgePeriod": 1,
+         "textRenderer": {
+            "type": "PLAIN",
+            "suffix": ""
+         },
+         "tolerance": 0.0
+      }
+   ]
+}
