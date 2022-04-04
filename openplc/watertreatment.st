@@ -1,9 +1,13 @@
 PROGRAM My_Program
   VAR
-    Amonio AT %MW205 : INT := 685;
-    OxigenoDisuelto AT %MW206 : INT := 254;
-    Aireacion AT %MW208 : INT := 3;
-    Temperatura AT %MW209 : INT := 15;
+    CaudalPurga AT %MD0 : DINT;
+    Nitrato AT %MW201 : INT;
+    Amonio AT %MW205 : INT;
+    OxigenoDisuelto AT %MW206 : INT;
+    Aireacion AT %MW208 : INT;
+    Temperatura AT %MW209 : INT;
+    CaudalAire AT %MW210 : INT;
+    CaudalRecircInt AT %QW1 : INT;
   END_VAR
   VAR
     Input : BOOL;
@@ -13,9 +17,6 @@ PROGRAM My_Program
   END_VAR
 
   MOVE5_OUT := MOVE(Temperatura);
-  Aireacion := MOVE5_OUT;
-  MOVE3_OUT := MOVE(Amonio);
-  OxigenoDisuelto := MOVE3_OUT;
 END_PROGRAM
 
 

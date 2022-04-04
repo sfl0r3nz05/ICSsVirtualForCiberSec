@@ -9,8 +9,8 @@ PROGRAM My_Program
     OxigenoDisuelto AT %MW206 : INT := 254;
     Aireacion AT %MW208 : INT := 3;
     Temperatura AT %MW209 : INT := 15;
-    CaudalAire AT %MW210 : INT;
-    CaudalRecircInt AT %QW1 : INT;
+    CaudalAire AT %MW210 : INT := 10;
+    CaudalRecircInt AT %QW1 : INT:= 1;
   END_VAR
   VAR
     Input : BOOL;
