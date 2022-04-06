@@ -69,12 +69,14 @@ function ModBusTCP = openConnection(ipaddress, port)
   ModBusTCP.ByteOrder='big-endian';
    
 function response = readFloating(ModBusTCP, target, registry)
-  value = read(ModBusTCP, target, registry)
-  value2 = fwrite(ModBusTCP, value,'int16');
-  disp(value2)
-  msb = read(ModBusTCP, 1, 'int16');
-  lsb = read(ModBusTCP, 1, 'int16');
-  float_num = int16([msb lsb]);
-  response = typecast(float_num, 'single');
+  %value = read(ModBusTCP, target, registry)
+  % value2 = fwrite(ModBusTCP, value,'int16');
+  % disp(value2)
+  % msb = fread(ModBusTCP, 1, 'int16');
+  % disp(msb)
+  % lsb = read(value, 1, 'int16');
+  % float_num = int16([msb lsb]);
+  % response = typecast(float_num, 'single');
+  response = read(ModBusTCP, target, registry, 1, 'single')
 
     

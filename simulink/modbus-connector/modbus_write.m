@@ -72,4 +72,4 @@ function ModBusTCP = openConnection(ipaddress, port)
   ModBusTCP.ByteOrder='big-endian';
 
 function writeModBus(ModBusTCP, target, registry, value)
-  write(ModBusTCP, target, registry, double(value))
+  write(ModBusTCP, target, registry, double(value), 'single')
