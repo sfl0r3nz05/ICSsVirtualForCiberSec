@@ -1,19 +1,15 @@
 PROGRAM My_Program
   VAR
-    CaudalPurga AT %MD0 : DINT;
-    Nitrato AT %MW201 : INT;
-    Amonio AT %MW205 : INT;
-    OxigenoDisuelto AT %MW206 : INT;
-    Aireacion AT %MW208 : INT;
-    Temperatura AT %MW209 : INT;
-    CaudalAire AT %MW210 : INT;
-    CaudalRecircInt AT %QW1 : INT;
+    Nitrato AT %MD0 : REAL := 1055211.5;
+    Amonio AT %MD1 : REAL := 102.0051215;
+    Temperatura AT %MD2 : REAL := 0.84525144544;
+    OxigenoDisuelto AT %MD3 : REAL := 10545504.5;
+    CaudalAire AT %MD4 : REAL := 105.5;
+    CaudalPurga AT %MD5 : REAL := 106.5;
+    CaudalRecircInt AT %MD6 : REAL := 107.3;
   END_VAR
   VAR
-    Input : BOOL;
-    Output : BOOL;
-    MOVE5_OUT : INT;
-    MOVE3_OUT : INT;
+    MOVE5_OUT : REAL;
   END_VAR
 
   MOVE5_OUT := MOVE(Temperatura);
