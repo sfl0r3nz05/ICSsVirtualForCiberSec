@@ -140,6 +140,10 @@ This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree p
 - [Read Modbus Module](https://es.mathworks.com/help/icomm/ug/modbus.read.html).
 - [Write Modbus Module](https://es.mathworks.com/help/icomm/ug/modbus.write.html).
 
+#### Build final image
+
+- It has been created a Dockerfile that ADD the source code into the container base image: `sflorenz05/matlab_simulink:v0.3`.
+- In this way, the image `sflorenz05/matlab_simulink:v0.4` has been built.
 
 #### Troubleshootings Matlab on Docker
 
