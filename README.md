@@ -1,46 +1,22 @@
 # Industrial cibersecurity laboratory deployment for ICS device virtualization and ciberattack testing
 
-- [Industrial cibersecurity laboratory deployment for ICS device virtualization and ciberattack testing](#industrial-cibersecurity-laboratory-deployment-for-ics-device-virtualization-and-ciberattack-testing)
-  - [Description](#description)
-  - [Requirements](#requirements)
-  - [Getting Started](#getting-started)
-    - [Getting Started OpenPLC](#getting-started-openplc)
-      - [Create your own OpenPLC image](#create-your-own-openplc-image)
-      - [Use the OpenPLC image created for the project](#use-the-openplc-image-created-for-the-project)
-      - [Follow this recommendation [Only for Modbus]](#follow-this-recommendation-only-for-modbus)
-    - [Getting Started Matlab](#getting-started-matlab)
-      - [Create your own Matlab Simulink Docker image](#create-your-own-matlab-simulink-docker-image)
-      - [Use the matlab simulink image created for the project](#use-the-matlab-simulink-image-created-for-the-project)
-      - [Reference to the Modbus Module used](#reference-to-the-modbus-module-used)
-      - [Troubleshootings Matlab on Docker](#troubleshootings-matlab-on-docker)
-      - [Import Project Files into the PATH before start simulation](#import-project-files-into-the-path-before-start-simulation)
-      - [Compile all `*.c` using mex compiler of Matlab](#compile-all-c-using-mex-compiler-of-matlab)
-      - [Run Simulink Project](#run-simulink-project)
-    - [Getting started Scada-LTS](#getting-started-scada-lts)
-      - [Troubleshootings Scada-LTS](#troubleshootings-scada-lts)
-    - [Getting Started network ICSNetwork](#getting-started-network-icsnetwork)
-    - [Getting Started Attacker](#getting-started-attacker)
-      - [Single Attacker](#single-attacker)
-        - [Create your own Attacker Docker image](#create-your-own-attacker-docker-image)
-        - [Use the attacker image created for the project](#use-the-attacker-image-created-for-the-project)
-        - [Deploying Attacker](#deploying-attacker)
-      - [ModTester](#modtester)
-        - [Create your own ModTester Docker image](#create-your-own-modtester-docker-image)
-        - [Use the modtester image created for the project](#use-the-modtester-image-created-for-the-project)
-        - [Deploying ModTester](#deploying-modtester)
-    - [Getting Started TCPDump](#getting-started-tcpdump)
-  - [How to use the project](#how-to-use-the-project)
-    - [Deploy ICSNetwork](#deploy-icsnetwork)
-    - [Deploy tcpdump](#deploy-tcpdump)
-    - [Deploy Attacker](#deploy-attacker)
-      - [Single Attacker](#single-attacker-1)
-      - [ModTester](#modtester-1)
-  - [How to test connection](#how-to-test-connection)
-    - [Install/use ping network tool](#installuse-ping-network-tool)
-
 ## Description
 
-This project arises as [@jmuguruza](https://github.com/jmuguruza) final degree project and [@ndevillalon](https://github.com/ndevillalon) internship and aims to perform security tests on a water treatment plant. For this purpose, the project integrates 3 basic elements: [OpenPLC](https://github.com/thiagoralves/OpenPLC_v3), [Scada-LTS](https://github.com/SCADA-LTS/Scada-LTS) and [Matlab on Docker](https://github.com/mathworks-ref-arch/matlab-dockerfile).
+- This project is currently under development and is supported by [@sfl0r3nz05](sfigueroa@ceit.es). The aim of this project is to develop the deployment of an ICS network on which to perform security tests. 
+
+- The specific use case to be implemented is that of a *Waster Water Treatment Plant (WWTP)*. However the project may integrate other use cases such as the [Tennesse-Eastman](http://depts.washington.edu/control/LARRY/TE/download.html).
+
+- This project is related to the [OT-NWbasedOnGNS3](https://github.com/sfl0r3nz05/OT-NWbasedOnGNS3) project, aiming to deploy the use case of this project on a larger ICS network.
+
+- The project has four components:
+  1. [OpenPLC](https://github.com/thiagoralves/OpenPLC_v3)
+  2. [Scada-LTS](https://github.com/SCADA-LTS/Scada-LTS)
+  3. [WWTP]
+  4. [Attacker]
+
+- These components are deployed in two ways:
+  1. [Docker compose network]()
+  2. [GNS3 network simulation]()
 
 **Project Status:** `in progress`
 
