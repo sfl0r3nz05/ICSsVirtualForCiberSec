@@ -11,8 +11,8 @@
 - The project has four components:
   1. [OpenPLC](https://github.com/thiagoralves/OpenPLC_v3)
   2. [Scada-LTS](https://github.com/SCADA-LTS/Scada-LTS)
-  3. [WWTP]
-  4. [Attacker]
+  3. [WWTP]()
+  4. [Attacker]()
 
 - These components are deployed in two ways:
   1. [Docker compose network]()
