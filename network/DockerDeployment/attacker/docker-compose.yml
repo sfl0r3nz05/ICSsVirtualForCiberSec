@@ -1,0 +1,15 @@
+version: '3'
+
+networks:
+  icsnetwork_ics:
+    external: true
+
+services:
+  attacker:
+    image: sflorenz05/attacker:v0.1
+    working_dir: /attacker
+    volumes:
+      - ../../attacker:/attacker
+    command: sh -c "./injection_attack -h ${IP_PLC} -f ${FREQ}" #command: tail -F anything #container running forever
+    networks:
+      - icsnetwork_ics
