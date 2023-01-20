@@ -1,4 +1,4 @@
-# Industrial cibersecurity laboratory deployment for ICS device virtualization and ciberattack testing
+# WWTP-based virtualized ICS lab for cyber security testing
 
 ## Description
 
@@ -20,16 +20,30 @@
 
 **Project Status:** `in progress`
 
+## State of the Art
+
+This is a compilation of works related to the theme of the project:
+
+1. [Development of an Open-Source Testbed Based on the Modbus Protocol for Cybersecurity Analysis of Nuclear Power Plants](./StateofArt/applsci-12-07942.pdf)
+
 ## Requirements
 
-1. Install [docker for ubuntu](https://docs.docker.com/engine/install/ubuntu/).
-2. [Manage Docker as non-root user](https://docs.docker.com/engine/install/linux-postinstall/).
-   1. If it does not work try running `sudo chmod o+rw /var/run/docker.sock` after adding a new user
-3. Install [docker-compose for ubuntu](https://docs.docker.com/compose/install/).
-4. Install make `sudo apt install make`.
-5. Install g++:
-   1. `sudo apt-get update`
-   2. `sudo apt-get install -y g++`
+- For deployment based on `docker compose`:
+
+  1. Install [docker for ubuntu](https://docs.docker.com/engine/install/ubuntu/).
+  2. [Manage Docker as non-root user](https://docs.docker.com/engine/install/linux-postinstall/).
+     1. If it does not work try running `sudo chmod o+rw /var/run/docker.sock` after adding a new user
+  3. Install [docker-compose for ubuntu](https://docs.docker.com/compose/install/).
+  4. Install make `sudo apt install make`.
+  5. Install g++:
+     1. `sudo apt-get update`
+     2. `sudo apt-get install -y g++`
+
+- For deployment based on `GNS3`:
+
+  > **Note**: For deployment over GNS3, the same previous requirements should be used.
+
+  1. [GNS3 server installation](./documentation/Requirements/gns3.md)
 
 ## Getting Started
 
