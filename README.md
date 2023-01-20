@@ -8,15 +8,9 @@
 
 - This project is related to the [OT-NWbasedOnGNS3](https://github.com/sfl0r3nz05/OT-NWbasedOnGNS3) project, aiming to deploy the use case of this project on a larger ICS network.
 
-- The project consists of four container-based components:
-  1. [OpenPLC](https://github.com/thiagoralves/OpenPLC_v3)
-  2. [Scada-LTS](https://github.com/SCADA-LTS/Scada-LTS)
-  3. [ICS Process]()
-  4. [Attacker]()
+- The project consists of four container-based components: [OpenPLC](https://github.com/thiagoralves/OpenPLC_v3), [Scada-LTS](https://github.com/SCADA-LTS/Scada-LTS), [ICS Process]() and [Attacker]().
 
-- These components are deployed in two ways:
-  1. [Docker compose network]()
-  2. [GNS3 network simulation]()
+- These components are deployed in two ways: [Docker compose network]() and [GNS3 network simulation]().
 
 **Project Status:** `in progress`
 
