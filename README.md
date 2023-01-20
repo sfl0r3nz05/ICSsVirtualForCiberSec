@@ -47,6 +47,13 @@ This is a compilation of works related to the theme of the project:
   3. [Scada-LTS container creation](./documentation/Components/Scada-LTS.md)
   4. [Attacker container creation](./documentation/Components/Attacker.md)
 
-- This section also consider how to build and set-up the network to be deployed.
+- This section also considers how to build and set-up the network to be deployed.
 
   1. [Network](./documentation/Components/Network.md)
+
+## Use cases virtualized
+
+  > **Note:** Next it is analyzed how to deploy the different use cases.
+
+1. [Water Heater Experiment](./documentation/UseCases/WaterHeater.md)
+2. [Water Waste Tratement Plant (WWTP)](./documentation/UseCases/WWTP.md)
