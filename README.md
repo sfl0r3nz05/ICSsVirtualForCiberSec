@@ -1,4 +1,4 @@
-# Industrial cibersecurity laboratory deployment for ICS device virtualization and ciberattack testing
+# WWTP-based virtualized ICS lab for cyber security testing
 
 ## Description
 
