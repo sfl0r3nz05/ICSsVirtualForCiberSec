@@ -5,7 +5,7 @@
   - Login with `username`: admin `password`: admin.
   - Create empty script in "Scripting".
 
-        ![scada1](https://user-images.githubusercontent.com/6643905/213805504-f13c140d-5d9c-4ff8-90a4-494c00893c47.png)
+      ![scada1](https://user-images.githubusercontent.com/6643905/213805504-f13c140d-5d9c-4ff8-90a4-494c00893c47.png)
 
   - Next go to the "SQL" tab.
   - Paste content scripts-one-insert.txt file into the text field "SQL".
@@ -14,7 +14,7 @@
   - Click "Submit update"
   - If the operation is successful, the information about adding 12 records will be displayed.
 
-        ![scada2](https://user-images.githubusercontent.com/6643905/213805526-3ab62586-805e-4fc1-9905-021bc9290cbd.png)
+      ![scada2](https://user-images.githubusercontent.com/6643905/213805526-3ab62586-805e-4fc1-9905-021bc9290cbd.png)
   
   - Then import the project (.json file).
     - E.g.: file `Water Heater 3 Stations.json` is placed into `~/ICSVirtual/scada-lts/sample/`

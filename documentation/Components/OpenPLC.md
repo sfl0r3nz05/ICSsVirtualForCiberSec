@@ -1,4 +1,4 @@
-# Build and Set-Up OpenPLC
+# Build and Set-Up OpenPLC container
 
 ## How to create your own OpenPLC image  
 
