@@ -46,11 +46,13 @@ This is a compilation of works related to the theme of the project:
 
   3. Scada-LTS:
 
-    > **Note:** For `docker-compose`
-      1. [Scada-LTS container creation](./documentation/Components/Scada-LTS.md)
+        > **Note:** For `docker-compose`
 
-    > **Note:** For `gns3`
-      2. [Scada-BR container importation](./documentation/Components/Scada-LTS-GNS3.md)
+     1. [Scada-LTS container creation](./documentation/Components/Scada-LTS.md)
+
+        > **Note:** For `gns3`
+
+     2. [Scada-BR container importation](./documentation/Components/Scada-LTS-GNS3.md)
 
   4. [Attacker container creation](./documentation/Components/Attacker.md)
 
