@@ -42,11 +42,31 @@ This is a compilation of works related to the theme of the project:
 
       > **Note:** The following containers will be associated with the industrial processes to be integrated in the project
 
-       1. [WWTP Process container based on Matlab](./documentation/Components/Matlab.md)
+      1. [WWTP Process container based on Matlab](./documentation/Components/Matlab.md)
 
-  3. [Scada-LTS container creation](./documentation/Components/Scada-LTS.md)
+  3. Scada-LTS:
+
+     1. For `docker-compose` deployment use the container included into the [docker-compose.yml](./network/DockerDeployment/ICSNetwork/docker-compose.yml) file.
+     2. For `gns3` use the following [Scada-BR container importation](./documentation/Components/Scada-LTS-GNS3.md)
+
+        > **Note:** Follow this step to set-up the ScadaBR container once it is deployed: [Scada-BR](./documentation/Components/Scada-LTS.md)
+
   4. [Attacker container creation](./documentation/Components/Attacker.md)
 
-- This section also consider how to build and set-up the network to be deployed.
+- This section also considers how to build and set-up the network to be deployed.
 
   1. [Network](./documentation/Components/Network.md)
+
+## Use cases virtualized
+
+  > **Note:** Next it is analyzed how to deploy the different use cases.
+
+1. [Water Heater Experiment](./documentation/UseCases/WaterHeater.md)
+2. [Water Waste Tratement Plant (WWTP)](./documentation/UseCases/WWTP.md)
+
+
+## To Do
+
+1. Migrate [ScadaBR](https://github.com/bitelxux/scadabr) to [ScadaLTS](https://github.com/SCADA-LTS/Scada-LTS)
+2. Properly document the use case [Water Heater Experiment](./documentation/UseCases/WaterHeater.md)
+3. Properly document the use case [Water Waste Tratement Plant (WWTP)](./documentation/UseCases/WWTP.md)

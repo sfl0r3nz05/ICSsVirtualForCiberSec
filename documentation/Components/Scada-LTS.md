@@ -24,7 +24,7 @@
   - Add a data source running on port 502 with host:openplc.
   - Make the connection with OpenPLC.
 
-        ![scada4](https://user-images.githubusercontent.com/6643905/213805643-020e7678-3582-438b-8772-267038a42282.png)
+       ![scada4](https://user-images.githubusercontent.com/6643905/213805643-020e7678-3582-438b-8772-267038a42282.png)
 
   - Add the background image at "Graphical views".
     - E.g.: file `background.png` is placed into `~/ICSVirtual/scada-lts/sample/`
