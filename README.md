@@ -63,3 +63,10 @@ This is a compilation of works related to the theme of the project:
 
 1. [Water Heater Experiment](./documentation/UseCases/WaterHeater.md)
 2. [Water Waste Tratement Plant (WWTP)](./documentation/UseCases/WWTP.md)
+
+
+## To Do
+
+1. Migrate [ScadaBR](https://github.com/bitelxux/scadabr) to [ScadaLTS](https://github.com/SCADA-LTS/Scada-LTS)
+2. Properly document the use case [Water Heater Experiment](./documentation/UseCases/WaterHeater.md)
+3. Properly document the use case [Water Waste Tratement Plant (WWTP)](./documentation/UseCases/WWTP.md)
