@@ -46,13 +46,10 @@ This is a compilation of works related to the theme of the project:
 
   3. Scada-LTS:
 
-        > **Note:** For `docker-compose`
+     1. For `docker-compose` deployment use the container included into the [docker-compose.yml](./network/DockerDeployment/ICSNetwork/docker-compose.yml) file.
+     2. For `gns3` use the following [Scada-BR container importation](./documentation/Components/Scada-LTS-GNS3.md)
 
-     1. [Scada-LTS container creation](./documentation/Components/Scada-LTS.md)
-
-        > **Note:** For `gns3`
-
-     2. [Scada-BR container importation](./documentation/Components/Scada-LTS-GNS3.md)
+      > **Note:** Follow this step to set-up the ScadaBR container once it is deployed: [Scada-BR](./documentation/Components/Scada-LTS.md)
 
   4. [Attacker container creation](./documentation/Components/Attacker.md)
 
