@@ -42,9 +42,16 @@ This is a compilation of works related to the theme of the project:
 
       > **Note:** The following containers will be associated with the industrial processes to be integrated in the project
 
-       1. [WWTP Process container based on Matlab](./documentation/Components/Matlab.md)
+      1. [WWTP Process container based on Matlab](./documentation/Components/Matlab.md)
 
-  3. [Scada-LTS container creation](./documentation/Components/Scada-LTS.md)
+  3. Scada-LTS:
+
+    > **Note:** For `docker-compose`
+      1. [Scada-LTS container creation](./documentation/Components/Scada-LTS.md)
+
+    > **Note:** For `gns3`
+      2. [Scada-BR container importation](./documentation/Components/Scada-LTS-GNS3.md)
+
   4. [Attacker container creation](./documentation/Components/Attacker.md)
 
 - This section also considers how to build and set-up the network to be deployed.
