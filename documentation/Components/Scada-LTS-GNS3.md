@@ -1,8 +1,8 @@
 # Import ScadaBR in GNS3
 
-> **Note:** The image of ScadaBR is based on the project [bitelxux/scadabr](https://github.com/bitelxux/scadabr)
+> **Note:** The image of ScadaBR is based on the project [carloskze/scadabr](https://hub.docker.com/r/carloskze/scadabr) which is an update of the [bitelxux/scadabr](https://github.com/bitelxux/scadabr) project.
 
-1. Import the [bitelxux/scadabr](https://hub.docker.com/r/bitelxux/scadabr/) image from docker hub: `docker pull bitelxux/scadabr`.
+1. Import the [carloskze/scadabr](https://hub.docker.com/r/carloskze/scadabr) image from docker hub: `docker pull carloskze/scadabr`.
 
 2. Import the docker container:
 
