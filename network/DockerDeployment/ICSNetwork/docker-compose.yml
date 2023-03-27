@@ -11,11 +11,7 @@ services:
     image: mysql/mysql-server:5.7
     ports:
       - "3306:3306"
-    environment:
-      MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
-      MYSQL_USER: "${MYSQL_USER}"
-      MYSQL_PASSWORD: "${MYSQL_PASSWORD}"
-      MYSQL_DATABASE: "${MYSQL_DATABASE}"
+    env_file: ./database/db.env
     expose: [ "3306" ]
     volumes:
       - ../../mysql/databases:/var/lib/mysql
