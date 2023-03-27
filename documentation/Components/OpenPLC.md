@@ -10,7 +10,7 @@
 
 - Open docker-compose file `cd ~/ICSVirtual/network/ICSNetwork`.
 - Change the image of the `openplc` service by `sflorenz05/open-plc:v0.1`.
-- The login credentials are set by default to **openplc** for both user and password.
+- The login credentials are set by default to `openplc` for both user and password.
 
 
 ## Follow this recommendation [Only for Modbus]
