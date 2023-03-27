@@ -3,4 +3,4 @@
 echo "Stopping attacker container"
 
 #docker rm -f $(docker ps -aq)
-docker-compose stop
+docker compose stop
