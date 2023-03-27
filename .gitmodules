@@ -1,3 +1,6 @@
 [submodule "network/ModTester"]
 	path = network/ModTester
 	url = https://github.com/Dangoro94/ModTester.git
+[submodule "ModTester"]
+	path = ModTester
+	url = https://github.com/sfl0r3nz05/ModTester.git
