@@ -6,27 +6,12 @@ networks:
 
 services:
 
-  database:
-    container_name: mysql
-    image: mysql/mysql-server:5.7
-    ports:
-      - "3306:3306"
-    env_file: ./database/db.env
-    expose: [ "3306" ]
-    volumes:
-      - ../../mysql/databases:/var/lib/mysql
-    networks:
-      - ics
-
   scadalts:
-    image: scadalts/scadalts:latest
+    image: kamiljarmusik/scadalts-2.6.18-mysql-8
     ports:
       - "8080:8080"
-    depends_on:
-      - database
+    env_file: ./database/db.env
     expose: [ "8080", "8000" ]
-    links:
-      - database:database
     networks:
       - ics
 
