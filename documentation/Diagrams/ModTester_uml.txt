@@ -1,0 +1,52 @@
+@startuml
+title modTester.py initialization
+
+partition modTester.py {
+(*)  --> "Add /System to module path"
+"Add /System to module path" --> "Import Interface from System.Core"
+"Import Interface from System.Core" --> "Inteface.Init()"
+"Inteface.Init()" --> === S1 ===
+-->"Interface.mainLoop(args)"
+
+}
+
+partition Interface.py #FFDB74{
+=== S1 === --> "Create Loader"
+"Create Loader" --> "Load modules from Application/modules and update module number"
+"Load modules from Application/modules and update module number" --> "Print Banner"
+"Print Banner" --> === S1 ===
+
+"Interface.mainLoop(args)" --> "Create and set Completer"
+"Create and set Completer" --> "Crawl and Load Plugins"
+"Crawl and Load Plugins" --> "Set RHOSTS to argument, set Threads to 254"
+--> "Read input"
+if "Input?" then
+  -->[Modtester command] "Execute Module"
+else
+  -->[not a command] "Read input"
+else
+  -->[exit] "Exit program"
+
+}
+
+
+partition Application/modules/modbus/module.py #SkyBlue{
+
+"Execute Module" --> "Read Input"
+if "Input?" then
+  -->[input is "back"] "Read input"
+else 
+  -->[Input is module variable] "Configure variable"
+else
+  -->[input is "exploit"]"Exploit"
+
+"Configure variable" --> "Read Input" 
+"Exploit" --> "Show result"
+"Show result" --> "Read Input"
+
+
+
+
+}
+
+@enduml
