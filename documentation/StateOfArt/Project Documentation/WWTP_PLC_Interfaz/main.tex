@@ -1,0 +1,90 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[spanish]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{array}
+\usepackage{multirow}
+
+\title{Diseño de Interfaz WWTP-PLC mediante el protocolo Modbus}
+\author{Ander Gómez Iglesias}
+\date{2023}
+
+\begin{document}
+
+\maketitle
+
+\section{Variables}
+Las variables que se monitorizan dentro del WWTP son las siguientes:\\
+
+\begin{tabular}{ |p{3cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|  }
+ \hline
+ \multicolumn{5}{|c|}{Variables} \\
+ \hline
+ Variable &Símbolo &I/O &Valor &Tipo\\
+ \hline
+ Caudal de Purga   & Qw &Input &95145 &int\\
+ Nitrato&   NO  & Input   &1.3 &float\\
+ Amonio &NH4 &Input &6.85 &float\\
+ Oxígeno disuelto &O &Input &0.0254 &float\\
+ Sólido Suspendido &SOL &Input &3138.87 &float\\
+ Aireación &AIR &Input &3 &int\\
+ Temperatura &T &Input &15 &int\\
+ Caudal de Aire &Qair &Output &30 - 200 &int\\
+ Caudal de recirculación interna &Qri &Output &57087 &int\\
+ \hline
+\end{tabular}\\\\
+
+Teniendo en cuenta la \href{https://openplcproject.com/docs/2-5-modbus-addressing/}{tabla de direcciones de memoria de Modbus de OpenPLC} y las \href{https://openplcproject.gitlab.io/openplc_v3/iec__types_8h.html}{referencias de tipo de variable}se han asignado los siguientes registros a cada una de las variables:\\\\
+
+\begin{tabular}{ |p{3cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|  }
+ \hline
+ \multicolumn{6}{|c|}{Variables} \\
+ \hline
+ Variable &Símbolo &I/O &Valor &Tipo &Dirección de Memoria\\
+ \hline
+ Caudal de Purga   & Qw &Input &95145 &DINT &MD0\\
+ Nitrato&   NO  & Input   &1.3 &REAL &MD2\\
+ Amonio &NH4 &Input &6.85 &REAL &MD4\\
+ Oxígeno disuelto &O &Input &0.0254 &REAL &MD6\\
+ Sólido Suspendido &SOL &Input &3138.87 &REAL &MD8\\
+ Aireación &AIR &Input &3 &INT &IW1\\
+ Temperatura &T &Input &15 &INT &IW2\\
+ Caudal de Aire &Qair &Output &30 - 200 &INT &QW1\\
+ Caudal de recirculación interna &Qri &Output &57087 &INT &QW2\\
+ \hline
+\end{tabular}
+
+\begin{tabular}{ |p{3cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|  }
+ \hline
+ \multicolumn{6}{|c|}{Variables} \\
+ \hline
+ Variable &Símbolo &I/O &Valor &Tipo &Dirección de Memoria\\
+ \hline
+ Caudal de Purga   & Qw &Input &95145 &REAL &MD0\\
+ Nitrato&   NO  & Input   &1.3 &REAL &MD2\\
+ Amonio &NH4 &Input &6.85 &REAL &MD4\\
+ Oxígeno disuelto &O &Input &0.0254 &REAL &MD6\\
+ Sólido Suspendido &SOL &Input &3138.87 &REAL &MD8\\
+ Aireación &AIR &Input &3 &REAL &MD10\\
+ Temperatura &T &Input &15 &REAL &MD12\\
+ Caudal de Aire &Qair &Output &30 - 200 &REAL &MD14\\
+ Caudal de recirculación interna &Qri &Output &57087 &REAL &MD16\\
+ \hline
+\end{tabular}
+
+\end{document}
+
+
+
+
+
