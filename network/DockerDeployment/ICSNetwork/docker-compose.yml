@@ -42,7 +42,10 @@ services:
   
   simlink:
     image: frolvlad/alpine-gxx
-    command: ../../../
+    #command: g++ /simLink/simlink.cpp -o simlink -pthread
+    command: tail -F anything
+    volumes: 
+      - ../../../wwtp/interface_simLink:/simLink
     networks:
       - ics
 
