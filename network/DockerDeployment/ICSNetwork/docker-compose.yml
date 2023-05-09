@@ -41,7 +41,8 @@ services:
       - ics
   
   simlink:
-    image: alpine:3.17
+    image: frolvlad/alpine-gxx
+    command: ../../../
     networks:
       - ics
 
