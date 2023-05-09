@@ -39,3 +39,9 @@ services:
       - ../../../wwtp/simulink:/home/matlab/Documents/MATLAB/simulink
     networks:
       - ics
+  
+  simlink:
+    image: alpine:3.17
+    networks:
+      - ics
+
