@@ -1,0 +1,42 @@
+@startuml
+title modTester.py initialization
+
+partition parameters.json #DBFF74{
+"Show attack list" --> "Configure attacks, IPs and mode"
+
+}
+
+
+partition automation.py #FF8B74{
+
+(*) --> "Import libraries"
+    --> "Define dictionary with module names and paths"
+    --> "Create Redis connection on port 6379"
+    --> "redis.set('finished', 0)"
+    --> read parameters.json, load data and print configured attack names
+    --> ======S1=======
+if "while attacks is not empty" then
+if  "'finished' == 0?" then
+    --> [yes]"redis.set('finished', 1)"
+    --> "Format command with first element of attacks and ip"
+    --> "Execute command via shell and append to subprocess list"
+    "Remove first element of attacks" -left-> =====S1=====
+else
+  -->[no] "Exit program"
+
+
+}
+
+partition modTester.py {
+
+    "Execute command via shell and append to subprocess list" --> "python2 modTester.py {0} {1}.format(names[data['attacks'][0]], data['ips'][0]"
+    --> "..."
+    --> "Show Result"
+    --> "Remove first element of attacks"
+
+}
+
+
+
+
+@enduml
