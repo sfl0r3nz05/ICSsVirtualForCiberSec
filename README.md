@@ -6,7 +6,7 @@
 
 ## Description 
 
-- The aim of this project is to develop and deploy of an ICS virtualized network on which to perform security tests.
+- The aim of this project is to develop and deploy an ICS virtualized network on which to perform security tests.
 
 - The specific use case to be implemented is that of a *Waster Water Treatment Plant (WWTP)*. However the project may integrate other use cases such as the [Tennesse-Eastman](http://depts.washington.edu/control/LARRY/TE/download.html).
 
