@@ -22,7 +22,7 @@ Compilation of documents related to the project theme
 
   1. [Development of an Open-Source Testbed Based on the Modbus Protocol for Cybersecurity Analysis of Nuclear Power Plants](./StateofArt/applsci-12-07942.pdf)
 
-## Installation and Deployment
+## Installation
 
 - Clone project repository locally:
 
