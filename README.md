@@ -24,25 +24,27 @@ Compilation of documents related to the project theme
 
 ## Installation and Deployment
 
-1. Clone project repository locally:
+- Clone project repository locally:
 
 ```shell
 git clone https://github.com/sfl0r3nz05/ICSsVirtualForCiberSec.git
 ```
 
-2. The project can be either deployed on Docker or GNS3. It is recommended to deploy the project on GNS3.
+2. Deploy the Project
+
+- The project can be either deployed on Docker or GNS3, although it is recommended to deploy the project on GNS3.
 
 - For deployment based on `docker compose`:
 
-  1. [Install basic requirements](./documentation/Requirements/basic-requirements.md).
+  - [Install basic requirements](./documentation/Requirements/basic-requirements.md).
 
 - For deployment based on `GNS3`:
 
   > **Note**: For deployment over GNS3, the same previous requirements should be used.
 
-  1. [GNS3 server installation](./documentation/Requirements/gns3.md)
+  - [GNS3 server installation](./documentation/Requirements/gns3.md)
 
-## Build and set up the component containers and network to be deployed
+## Component, Container and Network Setup
 
 - This section explains how to build and set-up the containers that will be imported in both the `docker compose` and `GNS3`.
 
