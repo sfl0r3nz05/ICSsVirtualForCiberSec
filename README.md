@@ -87,7 +87,7 @@ git clone https://github.com/sfl0r3nz05/ICSsVirtualForCiberSec.git
   - [x] Develop paper algorithm
   - [ ] implement algorithm on GNS3
 - [ ] Fix WWTP-OpenPLC interface deployment problem
-  - [ ] OpenPLC Forum feedback
+  - [ ] [OpenPLC Forum feedback](https://openplc.discussion.community/post/openplc-simulink-interface-problem-12648120)
 - [ ] Implement ModTester automatization
 - [x] Research for attack behaviour measurements and measurement methods
   - [x] Network based methods: pfsense, firewall, etc.
