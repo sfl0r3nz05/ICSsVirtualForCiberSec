@@ -1,8 +1,12 @@
-# ICSs virtualized lab for cybersecurity testing
+# ICSs Virtualized Lab for Cybersecurity Testing
+
+**Project Status:** `Development`
+
+> Supported by [@sfl0r3nz05](sfigueroa@ceit.es).
 
 ## Description 
 
-- This project is currently under development and is supported by [@sfl0r3nz05](sfigueroa@ceit.es). The aim of this project is to develop the deployment of an ICS network on which to perform security tests.
+- The aim of this project is to develop and deploy of an ICS virtualized network on which to perform security tests.
 
 - The specific use case to be implemented is that of a *Waster Water Treatment Plant (WWTP)*. However the project may integrate other use cases such as the [Tennesse-Eastman](http://depts.washington.edu/control/LARRY/TE/download.html).
 
@@ -12,11 +16,9 @@
 
 - These components are deployed in two ways: [Docker compose network]() and [GNS3 network simulation]().
 
-**Project Status:** `in progress`
-
 ## State of the Art
 
-This is a compilation of works related to the theme of the project:
+Compilation of works related to the theme of the project
 
   1. [Development of an Open-Source Testbed Based on the Modbus Protocol for Cybersecurity Analysis of Nuclear Power Plants](./StateofArt/applsci-12-07942.pdf)
 
