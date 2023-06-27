@@ -60,9 +60,9 @@ git clone https://github.com/sfl0r3nz05/ICSsVirtualForCiberSec.git
   3. Scada-LTS:
 
      1. For `docker-compose` deployment use the container included into the [docker-compose.yml](./network/DockerDeployment/ICSNetwork/docker-compose.yml) file.
-     2. For `gns3` use the following [Scada-BR container importation](./documentation/Components/Scada-LTS-GNS3.md)
+     2. For `gns3` use the following [Scada-LTS container importation](./documentation/Components/Scada-LTS-GNS3.md)
 
-        > **Note:** Follow this step to set-up the ScadaBR container once it is deployed: [Scada-BR](./documentation/Components/Scada-LTS.md)
+        > **Note:** Follow this step to set-up the ScadaBR container once it is deployed: [Scada-LTS](./documentation/Components/Scada-LTS.md)
 
   4. [Attacker container creation](./documentation/Components/Attacker.md)
 
