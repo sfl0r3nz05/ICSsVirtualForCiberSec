@@ -76,6 +76,15 @@ git clone https://github.com/sfl0r3nz05/ICSsVirtualForCiberSec.git
 2. [Water Waste Tratement Plant (WWTP)](./documentation/UseCases/WWTP.md)
 
 
+## Cybersecurity Measures
+
+- As referenced by [MITRE](https://attack.mitre.org/software/S1045/) and [Dragos](https://www.dragos.com/blog/industry-news/chernovite-pipedream-malware-targeting-industrial-control-systems/), the so-called INCONTROLLER or PIPEDREAM malware developed by the group CHERNOVITE is capable of targetting multiple ICS systems from different vendors and perfor attack successfully.
+- One of the most common attacks is the [Parameter Modification](https://attack.mitre.org/techniques/T0836/), which is the one performed in this [demonstration video](https://youtu.be/W10l6Pk4seo?t=843). This attack consist of changing the actual value of a PLC register into another one decided by the attacker.
+- To try to avoid this kind of attacks, an [alarm script](https://github.com/sfl0r3nz05/ICSsVirtualForCiberSec/blob/documented/documentation/Components/Alarm.md) has been developed and implemented into the project.
+- The GNS3 project file containing the alarm container can be found in [network/GNS3Deployment/demo.gns3project](./network/GNS3Deployment/demo.gns3project).
+- To run the project with the alarm script, just download it and follow the [GNS3 Project Deployment Guide](https://github.com/sfl0r3nz05/ICSsVirtualForCiberSec/blob/documented/documentation/Components/Deployment/GNS3.md)
+
+
 ## To Do
 
 - [x] Document Project
