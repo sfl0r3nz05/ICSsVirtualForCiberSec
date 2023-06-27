@@ -1,4 +1,4 @@
-# Basic requirements
+# Basic Requirements
 
 1. Install [docker for ubuntu](https://docs.docker.com/engine/install/ubuntu/).
    1. [Manage Docker as non-root user](https://docs.docker.com/engine/install/linux-postinstall/).
