@@ -78,4 +78,3 @@
 
     - `make destroy`
 
-## For deployment based on `GNS3`
