@@ -78,14 +78,14 @@ git clone https://github.com/sfl0r3nz05/ICSsVirtualForCiberSec.git
 
 ## To Do
 
-- [ ] Document Project
+- [x] Document Project
 - [x] Write attack-detection table for each case
 - [ ] Deploy whole project on GNS3
   - [ ] Try to fix sporadic errors
   - [ ] Implement pfsense on host
   - [ ] Implement wazhu as GNS3 container
   - [x] Develop paper algorithm
-  - [ ] implement algorithm on GNS3
+  - [x] implement algorithm on GNS3
 - [ ] Fix WWTP-OpenPLC interface deployment problem
   - [ ] [OpenPLC Forum feedback](https://openplc.discussion.community/post/openplc-simulink-interface-problem-12648120)
 - [ ] Implement ModTester automatization
