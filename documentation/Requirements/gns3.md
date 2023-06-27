@@ -1,16 +1,18 @@
 # Deployment of GNS3 server on EC2 instance
 
-- [Deployment of GNS3 server on EC2 instance](#deployment-of-gns3-server-on-ec2-instance)
-  - [Deploy GNS3 Server](#deploy-gns3-server)
-  - [Connect to GNS3 Server from GNS3 client](#connect-to-gns3-server-from-gns3-client)
-  - [How to bypass a network of restrictions by tunneling](#how-to-bypass-a-network-of-restrictions-by-tunneling)
-  - [To Do](#to-do)
+This section explains how to deploy a GNS3 server on an AWS EC2 instance. If this is not your case, you can follow [these steps](https://docs.gns3.com/docs/getting-started/installation/remote-server/) from the GNS3 documentation.
+
+- [Deploy GNS3 Server](#deploy-gns3-server)
+- [Connect to GNS3 Server from GNS3 client](#connect-to-gns3-server)
+- [How to bypass a network of restrictions by tunneling](#how-to-bypass-a-network-of-restrictions-by-tunneling)
+- [Alternative Method](#alternative-method)
+- [To Do](#to-do)
 
 The purpose of this repository is to deploy a GNS3 server on an EC2 instance of AWS. The following figure shows the basic architecture of the deployment to be implemented:
 
 ![image](https://user-images.githubusercontent.com/69375071/210196949-15232346-a583-4ab8-a562-4d7811d152be.png)
 
-## Deploy GNS3 Server
+# Deploy GNS3 Server
 
 To perform the right deployment follow each of the following steps:
 
@@ -88,7 +90,7 @@ To perform the right deployment follow each of the following steps:
 
 ![image](https://user-images.githubusercontent.com/69375071/210197180-6d23f0f8-dc3b-4803-b45c-cdf1a0ed3da1.png)
 
-## Connect to GNS3 Server from GNS3 client
+# Connect to GNS3 Server
 
 1. Now, it is time to connect to the server via the GNS3 client and configure the preferences properly.
 
@@ -105,7 +107,7 @@ To perform the right deployment follow each of the following steps:
 
     ![image](https://user-images.githubusercontent.com/69375071/210197229-e9904096-9f2e-4f78-80b2-72a93303947a.png)
 
-## How to bypass a network of restrictions by tunneling
+# How to bypass a network of restrictions by tunneling
 
 If we are under a restrictive network with firewalls blocking the network, the following tunneling is proposed to bypass it.
 
@@ -125,8 +127,10 @@ ssh -N -i .\openstack.pem -L localhost:3080:172.31.88.200:3080 ubuntu@54.89.220.
 
 ![image](https://user-images.githubusercontent.com/69375071/210197244-b8121b0f-9b41-4e6b-9eb1-fa5647685811.png)
 
-## To Do
+# Alternative Method
+- If the previous method to deploy GNS3 Server on EC2 did not work, you can follow the steps from [this video](https://www.youtube.com/watch?v=8uxEtWDleDQ) to setup a VPN in the EC2 instance and connect to the GNS3 server through it.
 
-1. Enable secure connection between the client and server via TLS
-2. Document how to apply rules on aws to open port
-3. Document how to add a new router using binary files
+# To Do
+
+[] Enable secure connection between the client and server via TLS
+[] Document how to add a new router using binary files
