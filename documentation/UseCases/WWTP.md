@@ -9,7 +9,7 @@
 
 ### GNS3 Deployment Demonstration Video
 
-[This video](https://www.youtube.com/watch?v=W10l6Pk4seo) is a demonstration of the project deployment and attacker in GNS3. The video is dicided into chapters for each of teh components of project.
+[This video](https://www.youtube.com/watch?v=W10l6Pk4seo) is a demonstration of the project deployment and attacker in GNS3. The video is divided into chapters for each of the components of the project.
 
 ## For deployment based on `docker compose`
 
