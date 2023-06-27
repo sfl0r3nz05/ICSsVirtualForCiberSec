@@ -46,7 +46,7 @@ git clone https://github.com/sfl0r3nz05/ICSsVirtualForCiberSec.git
 
 ## Component, Container and Network Setup
 
-- This section explains how to build and set-up the containers that will be imported in both the `docker compose` and `GNS3`.
+- This section explains how to build and set-up the containers that will be imported in both `docker compose` and `GNS3`.
 
   1. [OpenPLC container creation](./documentation/Components/OpenPLC.md)
 
