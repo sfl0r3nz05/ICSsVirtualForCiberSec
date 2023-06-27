@@ -18,7 +18,9 @@
 
 Compilation of documents related to the project theme
 
-  1. [Development of an Open-Source Testbed Based on the Modbus Protocol for Cybersecurity Analysis of Nuclear Power Plants](./StateofArt/applsci-12-07942.pdf)
+  1. [Development of an Open-Source Testbed Based on the Modbus Protocol for Cybersecurity Analysis of Nuclear Power Plants](https://github.com/sfl0r3nz05/ICSsVirtualForCiberSec/blob/documented/documentation/StateOfArt/Papers/applsci-12-07942.pdf)
+  2. [Whitepaper: CHERNOVITE's Emerging Malware Targeting Industrial Control Systems](https://github.com/sfl0r3nz05/ICSsVirtualForCiberSec/blob/documented/documentation/StateOfArt/Papers/Dragos_ChernoviteWP_v2b.pdf)
+  3. [Stuxnet: Dissecting a Cyberwarfare Weapon](https://github.com/sfl0r3nz05/ICSsVirtualForCiberSec/blob/documented/documentation/StateOfArt/Papers/Stuxnet_Dissecting_a_Cyberwarfare_Weapon.pdf)
 
 ## Installation
 
