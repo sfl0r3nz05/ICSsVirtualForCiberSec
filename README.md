@@ -12,7 +12,7 @@
 
 - This project is related to the [OT-NWbasedOnGNS3](https://github.com/sfl0r3nz05/OT-NWbasedOnGNS3) project, aiming to deploy the use case of this project on a larger ICS network.
 
-- The project can be deployed in two ways: [Docker compose network]() and [GNS3 network simulation]().
+- The project can be deployed in two ways: [Docker compose network](https://github.com/sfl0r3nz05/ICSsVirtualForCiberSec/blob/documented/documentation/Components/Deployment/Docker-Compose.md) and [GNS3 network simulation](https://github.com/sfl0r3nz05/ICSsVirtualForCiberSec/blob/documented/documentation/Components/Deployment/GNS3.md).
 
 ## State of the Art
 
