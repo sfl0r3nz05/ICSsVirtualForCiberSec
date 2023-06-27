@@ -12,9 +12,7 @@
 
 - This project is related to the [OT-NWbasedOnGNS3](https://github.com/sfl0r3nz05/OT-NWbasedOnGNS3) project, aiming to deploy the use case of this project on a larger ICS network.
 
-- The project consists of four container-based components: [OpenPLC](https://github.com/thiagoralves/OpenPLC_v3), [Scada-LTS](https://github.com/SCADA-LTS/Scada-LTS), [ICS Process]() and [Attacker]().
-
-- These components are deployed in two ways: [Docker compose network]() and [GNS3 network simulation]().
+- The project can be deployed in two ways: [Docker compose network]() and [GNS3 network simulation]().
 
 ## State of the Art
 
@@ -57,12 +55,12 @@ git clone https://github.com/sfl0r3nz05/ICSsVirtualForCiberSec.git
       1. [WWTP Process container based on Matlab](./documentation/Components/Matlab.md)
       2. [SimLink interface](./documentation/Components/SimLink.md)
 
-  3. Scada-LTS:
+  3. Scada-LTS-MySQL:
 
      1. For `docker-compose` deployment use the container included into the [docker-compose.yml](./network/DockerDeployment/ICSNetwork/docker-compose.yml) file.
-     2. For `gns3` use the following [Scada-LTS container importation](./documentation/Components/Scada-LTS-GNS3.md)
+     2. For `gns3` use the following [Scada-LTS-MySQL container importation](./documentation/Components/Scada-LTS-GNS3.md)
 
-        > **Note:** Follow this step to set-up the ScadaBR container once it is deployed: [Scada-LTS](./documentation/Components/Scada-LTS.md)
+        > **Note:** Follow this step to set-up the ScadaLTS-MySQL container once it is deployed: [Scada-LTS-MySQL](./documentation/Components/Scada-LTS.md)
 
   4. [Attacker container creation](./documentation/Components/Attacker.md)
 
