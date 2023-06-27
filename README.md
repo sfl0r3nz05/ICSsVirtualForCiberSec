@@ -18,11 +18,19 @@
 
 ## State of the Art
 
-Compilation of works related to the theme of the project
+Compilation of documents related to the project theme
 
   1. [Development of an Open-Source Testbed Based on the Modbus Protocol for Cybersecurity Analysis of Nuclear Power Plants](./StateofArt/applsci-12-07942.pdf)
 
-## Requirements
+## Installation and Deployment
+
+1. Clone project repository locally:
+
+```shell
+git clone https://github.com/sfl0r3nz05/ICSsVirtualForCiberSec.git
+```
+
+2. The project can be either deployed on Docker or GNS3. It is recommended to deploy the project on GNS3.
 
 - For deployment based on `docker compose`:
 
@@ -69,7 +77,17 @@ Compilation of works related to the theme of the project
 
 ## To Do
 
-1. Migrate [ScadaBR](https://github.com/bitelxux/scadabr) to [ScadaLTS](https://github.com/SCADA-LTS/Scada-LTS)
-2. Properly document the use case [Water Heater Experiment](./documentation/UseCases/WaterHeater.md)
-3. Properly document the use case [Water Waste Tratement Plant (WWTP)](./documentation/UseCases/WWTP.md)
+- [ ] Document Project
+- [x] Write attack-detection table for each case
+- [ ] Deploy whole project on GNS3
+  - [ ] Try to fix sporadic errors
+  - [ ] Implement pfsense on host
+  - [ ] Implement wazhu as GNS3 container
+  - [x] Develop paper algorithm
+  - [ ] implement algorithm on GNS3
+- [ ] Fix WWTP-OpenPLC interface deployment problem
+  - [ ] OpenPLC Forum feedback
+- [ ] Implement ModTester automatization
+- [x] Research for attack behaviour measurements and measurement methods
+  - [x] Network based methods: pfsense, firewall, etc.
 
