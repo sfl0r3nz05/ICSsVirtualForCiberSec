@@ -132,5 +132,5 @@ ssh -N -i .\openstack.pem -L localhost:3080:172.31.88.200:3080 ubuntu@54.89.220.
 
 # To Do
 
-[] Enable secure connection between the client and server via TLS
-[] Document how to add a new router using binary files
+- [ ] Enable secure connection between the client and server via TLS
+- [ ] Document how to add a new router using binary files
