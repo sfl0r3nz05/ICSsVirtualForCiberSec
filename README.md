@@ -55,6 +55,7 @@ git clone https://github.com/sfl0r3nz05/ICSsVirtualForCiberSec.git
       > **Note:** The following containers will be associated with the industrial processes to be integrated in the project
 
       1. [WWTP Process container based on Matlab](./documentation/Components/Matlab.md)
+      2. [SimLink interface](./documentation/Components/SimLink.md)
 
   3. Scada-LTS:
 
