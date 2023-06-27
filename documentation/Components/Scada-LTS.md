@@ -1,7 +1,7 @@
 # Build and Set-Up Scada-LTS
 
 - Once Scada-LTS container is running:
-  - Access to Scada-LTS GUI: [http://localhost:8080/ScadaBR/](http://localhost:8080/Scada-LTS/).
+  - Access to Scada-LTS GUI: [http://localhost:8080/Scada-LTS/](http://localhost:8080/Scada-LTS/).
   - Login with `username`: admin `password`: admin.
   - Create empty script in "Scripting".
 
