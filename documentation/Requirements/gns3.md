@@ -3,7 +3,7 @@
 This section explains how to deploy a GNS3 server on an AWS EC2 instance. If this is not your case, you can follow [these steps](https://docs.gns3.com/docs/getting-started/installation/remote-server/) from the GNS3 documentation.
 
 - [Deploy GNS3 Server](#deploy-gns3-server)
-- [Connect to GNS3 Server from GNS3 client](#connect-to-gns3-server)
+- [Connect to GNS3 Server](#connect-to-gns3-server)
 - [How to bypass a network of restrictions by tunneling](#how-to-bypass-a-network-of-restrictions-by-tunneling)
 - [Alternative Method](#alternative-method)
 - [To Do](#to-do)
