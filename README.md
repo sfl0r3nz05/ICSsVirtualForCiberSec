@@ -63,7 +63,9 @@ git clone https://github.com/sfl0r3nz05/ICSsVirtualForCiberSec.git
 - The GNS3 project file containing the alarm container can be found in [network/GNS3Deployment/demo.gns3project](./network/GNS3Deployment/demo.gns3project).
 - To run the project with the alarm script, just download it and follow the [GNS3 Project Deployment Guide](https://github.com/sfl0r3nz05/ICSsVirtualForCiberSec/blob/documented/documentation/Components/Deployment/GNS3.md)
   
-  ## Component, Container and Network Setup
+  ## Advanced Configuration
+
+  > Note: This section is for advanced users that want to customize the continer configuration or contribute to the project. If yu only want to run the preconfigured case scenario follow the steps in Getting Started.
   
   - This section explains how to build and set-up the containers that will be imported in both `docker compose` and `GNS3`.
     
