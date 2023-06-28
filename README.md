@@ -55,9 +55,13 @@ Compilation of documents related to the project theme
 git clone https://github.com/sfl0r3nz05/ICSsVirtualForCiberSec.git
 ```
 
-- For `docker-compose` deployment use the container included into the [docker-compose.yml](./network/DockerDeployment/ICSNetwork/docker-compose.yml) file.
+- For `docker-compose` deployment run the [docker-compose.yml](./network/DockerDeployment/ICSNetwork/docker-compose.yml) file using Docker Compose.
+- To do so, navigate to the directory where the `docker-compose.yml` file is located and run the following command:
+```shell
+docker compose up -d
+```
   
-- For `gns3` deployment use the following [GNS3 Deployment Guide](https://github.com/sfl0r3nz05/ICSsVirtualForCiberSec/blob/documented/documentation/Components/Deployment/GNS3.md)
+- For `GNS3` deployment use the following [GNS3 Deployment Guide](https://github.com/sfl0r3nz05/ICSsVirtualForCiberSec/blob/documented/documentation/Components/Deployment/GNS3.md)
 
 ## Use Cases
 
@@ -76,7 +80,7 @@ git clone https://github.com/sfl0r3nz05/ICSsVirtualForCiberSec.git
   
 ## Advanced Configuration
 
-  > Note: This section is for advanced users that want to customize the continer configuration or contribute to the project. If yu only want to run the preconfigured case scenario follow the steps in [Getting Started](#getting-started).
+  > Note: This section is for advanced users that want to edit the pre-established continer configuration. If you only want to run the preconfigured case scenario follow the steps in [Getting Started](#getting-started).
   
   - This section explains how to build and set-up the containers that will be imported in both `docker compose` and `GNS3`.
     
