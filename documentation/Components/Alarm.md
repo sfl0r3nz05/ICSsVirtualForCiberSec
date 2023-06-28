@@ -5,4 +5,4 @@
 
 ![image](https://github.com/sfl0r3nz05/ICSsVirtualForCiberSec/assets/105321735/c25c6160-6c89-464e-8458-704a8a9ff7a0)
 
-- Sourcecode of the script can be found in [/alarm/alarm.py](https://github.com/sfl0r3nz05/ICSsVirtualForCiberSec/blob/documented/alarm/alarm.py).
+- Sourcecode of the script can be found in [alarm/alarm.py](https://github.com/sfl0r3nz05/ICSsVirtualForCiberSec/blob/documented/alarm/alarm.py).
