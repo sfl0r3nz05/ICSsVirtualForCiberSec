@@ -68,7 +68,7 @@ git clone https://github.com/sfl0r3nz05/ICSsVirtualForCiberSec.git
 
 - This section also considers how to build and set-up the network to be deployed.
 
-  1. [Network](./documentation/Components/Network.md)
+  1. [Network](./documentation/Components/Deployment/Docker-Compose.md)
 
 ## Use cases virtualized
 
