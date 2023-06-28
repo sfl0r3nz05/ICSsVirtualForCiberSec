@@ -44,6 +44,10 @@ Compilation of documents related to the project theme
 git clone https://github.com/sfl0r3nz05/ICSsVirtualForCiberSec.git
 ```
 
+- For `docker-compose` deployment use the container included into the [docker-compose.yml](./network/DockerDeployment/ICSNetwork/docker-compose.yml) file.
+  
+- For `gns3` deployment use the following [GNS3 Deployment Guide](https://github.com/sfl0r3nz05/ICSsVirtualForCiberSec/blob/documented/documentation/Components/Deployment/GNS3.md)
+
 ## Use Cases
 
 - The following use cases have been implemented and tested:
