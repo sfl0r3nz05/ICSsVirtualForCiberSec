@@ -1,5 +1,11 @@
 # GNS3 Deployment
 
+
+![diagrama_documentacion drawio (2)](https://github.com/sfl0r3nz05/ICSsVirtualForCiberSec/assets/105321735/8a175992-e114-4e0d-ae1e-eb34334be5ea)
+
+
+
+
 - Once GNS3 server is installed and running (as explained in [GNS3 Server Installation](https://github.com/sfl0r3nz05/ICSsVirtualForCiberSec/blob/documented/documentation/Requirements/gns3.md)), it's time to import and deploy the containers of the project.
 
 ## Project Importation
