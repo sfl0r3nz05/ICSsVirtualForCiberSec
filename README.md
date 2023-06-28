@@ -44,7 +44,7 @@ Compilation of documents related to the project theme
 git clone https://github.com/sfl0r3nz05/ICSsVirtualForCiberSec.git
 ```
 
-## Use cases
+## Use Cases
 
 - The following use cases have been implemented and tested:
 
