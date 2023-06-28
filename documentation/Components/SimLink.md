@@ -4,7 +4,7 @@
 
 ## Build SimLink Docker Image
 
-- Copy the files in [wwtp/interface_simLink](https://github.com/sfl0r3nz05/ICSsVirtualForCiberSec/tree/main/wwtp/interface_simLink). Remember that for GNS3 deployment files must be copied to the system where the GNS3 server is running.
+- Copy the files in [wwtp/interface_simLink](https://github.com/sfl0r3nz05/ICSsVirtualForCiberSec/tree/documented/wwtp/interface_simLink). Remember that for GNS3 deployment files must be copied to the system where the GNS3 server is running.
 - Build the docker image. You can replace SimLink-interface to whichever name you like.
 ```shell
 docker build -t SimLink-interface .
